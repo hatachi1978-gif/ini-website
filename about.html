@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>关于 INI｜中欧新能源跨境执行平台</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="ini-styles.css">
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">IN</div>
+      <div class="logo-text">
+        <span class="main">INI</span>
+        <span class="sub">IBERIAN NEXUS INVESTMENT</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html" data-num="01" class="current">关于</a></li>
+      <li><a href="solutions.html" data-num="02">业务总览</a></li>
+      <li><a href="track-01.html" data-num="03">企业出海</a></li>
+      <li><a href="track-02.html" data-num="04">资产投资</a></li>
+      <li><a href="contact.html" data-num="05">联系</a></li>
+    </ul>
+    <div class="nav-lang">
+      <span class="inactive">EN</span>
+      <span class="active">中文</span>
+      <span class="disabled">ES</span>
+    </div>
+  </div>
+</nav>
+
+<section class="about-page">
+  <div class="container">
+    <div class="about-hero fade-in">
+      <div class="detail-line">关于 INI</div>
+      <h1>不是中介，<br>是<span class="gold">落地执行者</span></h1>
+      <div class="mini-divider"></div>
+    </div>
+
+    <div class="about-body fade-in">
+      <p>
+        <strong>Iberian Nexus Investment SL</strong> 注册于西班牙马德里，并在中国上海设有团队。我们专注于中欧新能源产业的跨境执行，经营两条相互独立的业务线：一是中国新能源企业的欧洲市场进入与本地化落地；二是欧洲新能源资产与中国资本之间的跨境投资撮合。
+      </p>
+      <p>
+        我们的核心团队拥有<strong>逾 20 年欧洲新能源全产业链经验</strong>——覆盖光伏、储能、风电的开发、EPC 与设备制造各环节。立足马德里，业务覆盖全欧主要市场。
+      </p>
+      <p>
+        欧洲合伙人确保欧洲端的本地化执行；上海团队对接中国资本与供应链。从首次引荐到首批交付，我们陪您走完每一步——但不混淆两条业务的边界，不以彼此导流或捆绑作为前提。
+      </p>
+      <p>
+        我们相信跨境业务不应被讲成"全程陪跑"或"一站式平台"。复杂度需要被工程化拆解为可执行的阶段任务，每个节点有明确的产出物、明确的责任人、明确的退出标准。
+      </p>
+
+      <div class="about-tagline">
+        一支团队，两个时区，<br>
+        <span class="gold">同一套跨境执行纪律。</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-creds">
+  <div class="container">
+    <div class="section-head center fade-in">
+      <div class="section-label">能力锚点</div>
+      <h2 class="h-display">我们的<span class="gold">基础能力</span></h2>
+      <p class="lede">这些能力同时支撑两条业务线，但两条业务在客户对象、流程、文件与商业模式上保持独立。</p>
+    </div>
+
+    <div class="credentials-grid fade-in">
+      <div class="cred">
+        <div class="cred-value">20+</div>
+        <div class="cred-label">年行业积淀</div>
+      </div>
+      <div class="cred">
+        <div class="cred-value small">Madrid · Shanghai</div>
+        <div class="cred-label">双总部</div>
+      </div>
+      <div class="cred">
+        <div class="cred-value small">Spain-rooted<br>EU-wide</div>
+        <div class="cred-label">立足马德里 · 服务全欧</div>
+      </div>
+      <div class="cred">
+        <div class="cred-value small">PV · ESS · Wind</div>
+        <div class="cred-label">覆盖品类</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <span>© 2026 Iberian Nexus Investment SL · 马德里 · 上海</span>
+      <span>EN · 中文 · ES</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 30) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 50);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>联系我们｜INI Investment</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="ini-styles.css">
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">IN</div>
+      <div class="logo-text">
+        <span class="main">INI</span>
+        <span class="sub">IBERIAN NEXUS INVESTMENT</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html" data-num="01">关于</a></li>
+      <li><a href="solutions.html" data-num="02">业务总览</a></li>
+      <li><a href="track-01.html" data-num="03">企业出海</a></li>
+      <li><a href="track-02.html" data-num="04">资产投资</a></li>
+      <li><a href="contact.html" data-num="05" class="current">联系</a></li>
+    </ul>
+    <div class="nav-lang">
+      <span class="inactive">EN</span>
+      <span class="active">中文</span>
+      <span class="disabled">ES</span>
+    </div>
+  </div>
+</nav>
+
+<section class="contact-page">
+  <div class="container">
+    <div class="contact-hero fade-in">
+      <div class="detail-line">联系我们</div>
+      <h1>开始一次<span class="gold">对话</span></h1>
+      <div class="mini-divider"></div>
+      <p>
+        我们更倾向于先理解您的具体场景，再判断是否适合协同。如果您有明确的项目需求、出海计划或投资标的，欢迎直接联系——请在邮件中简述您的处境与诉求，我们会以同样的简洁回复您。
+      </p>
+    </div>
+
+    <div class="office-grid fade-in" style="max-width: 880px; margin: 4rem auto 3rem;">
+      <div class="office">
+        <div class="office-flag">马德里 · 西班牙</div>
+        <div class="office-name">欧洲总部</div>
+        <div class="office-addr">Paseo de la Castellana, 121 – 7ºB<br>28046 Madrid, Spain</div>
+      </div>
+      <div class="office">
+        <div class="office-flag">上海 · 中国</div>
+        <div class="office-name">中国办公室</div>
+        <div class="office-addr">虹桥绿谷广场 G 幢 4 楼<br>甬虹路 69 号，闵行区，上海</div>
+      </div>
+    </div>
+
+    <div class="email-block fade-in" style="max-width: 880px; margin: 0 auto;">
+      <div class="email-label">EMAIL</div>
+      <a href="mailto:contact@iberian-nexus.com" class="email-addr">contact@iberian-nexus.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <span>© 2026 Iberian Nexus Investment SL · 马德里 · 上海</span>
+      <span>EN · 中文 · ES</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 30) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 50);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
