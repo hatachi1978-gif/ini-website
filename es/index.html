@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INI Investment | Plataforma de Ejecución Transfronteriza China-Europa en Energías Renovables</title>
+<meta name="description" content="Iberian Nexus Investment SL — Plataforma de ejecución transfronteriza China-Europa en energías renovables. Dos líneas independientes: expansión de empresas chinas en Europa y transacciones transfronterizas de activos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../ini-styles.css">
+<style>
+  :root {
+    --en-space-3xs: 4px;
+    --en-space-2xs: 8px;
+    --en-space-xs: 16px;
+    --en-space-sm: 24px;
+    --en-space-md: 40px;
+    --en-space-lg: 64px;
+    --en-space-xl: 96px;
+    --en-space-2xl: 128px;
+
+    --en-gold: #C8A04C;
+    --en-gold-hover: #E0B860;
+    --en-gold-soft: rgba(200, 160, 76, 0.2);
+    --en-gold-faint: rgba(200, 160, 76, 0.12);
+    --en-gold-dim: rgba(200, 160, 76, 0.55);
+    --en-cream: #F0EBDC;
+    --en-cream-dim: rgba(240, 235, 220, 0.7);
+  }
+
+  /* ----- BODY TYPOGRAPHY ----- */
+  body, p, .lede, .hero-support, .stat-label,
+  .cred-label, .track-card p, .independence-note,
+  .see-more-cta a, .stage p, .mode p, .pillar p,
+  .boundary-list li, .matrix-list li,
+  .deliv-item, .fit-list li, .audience-list,
+  .office-name, .office-addr,
+  .selector-q, .selector-trigger, .commitment-formula-lede,
+  .formula-text, .milestone-actions li,
+  .cross-link-title, .featured-text,
+  .contact-lede, .step-mini-title, .step-mini-sub,
+  .step-title, .step-sub, .milestone-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-weight: 400;
+  }
+
+  body { font-size: 16px; line-height: 1.7; }
+  p { font-size: 17px; line-height: 1.7; }
+  .lede { font-size: 20px !important; line-height: 1.6 !important; font-weight: 400 !important; }
+
+  /* ----- DISPLAY TYPOGRAPHY ----- */
+  h1, h2, h3, h4, h5, .h-display,
+  .about-tagline, .logo-text .main {
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif !important;
+    font-weight: 500 !important;
+  }
+  h1 {
+    font-size: clamp(48px, 5.5vw, 76px) !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.015em !important;
+  }
+  .h-display, h2 {
+    font-size: clamp(36px, 4vw, 52px) !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.01em !important;
+  }
+  h3 {
+    font-size: 28px !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.005em !important;
+  }
+  h4 { font-size: 22px !important; line-height: 1.3 !important; }
+  h5 { font-size: 18px !important; line-height: 1.4 !important; }
+
+  /* ----- MONO LABELS ----- */
+  .section-label, .detail-line, .hero-eyebrow,
+  .track-section-label, .boundary-label,
+  .track-tag, .stage-tag, .fit-tag,
+  .matrix-col-head, .office-flag,
+  .formula-tag, .step-num, .mode-num, .pillar-num,
+  .milestone-dot, .email-label, .cross-link-meta,
+  .track-card-cta, .selector-arrow, .nav-lang,
+  .logo-text .sub {
+    font-family: 'JetBrains Mono', monospace !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.14em !important;
+  }
+  .section-label, .track-section-label, .detail-line,
+  .hero-eyebrow, .boundary-label, .email-label,
+  .office-flag, .cross-link-meta, .track-tag,
+  .stage-tag, .fit-tag, .matrix-col-head {
+    font-size: 11px !important;
+    font-weight: 500 !important;
+  }
+  .track-card-cta, .selector-arrow {
+    font-size: 12px !important;
+    letter-spacing: 0.16em !important;
+  }
+  .nav-lang { font-size: 12px !important; letter-spacing: 0.1em !important; }
+
+  /* ============================================
+     NAV LINKS
+     ============================================ */
+  .nav-links {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .nav-links li {
+    margin: 0 !important;
+    padding: 0 32px 0 0 !important;
+    list-style: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+  }
+  .nav-links li:last-child {
+    padding-right: 0 !important;
+  }
+  .nav-links a {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.14em !important;
+    text-transform: uppercase !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+  }
+  .nav-links a::before,
+  .nav-links li a::before,
+  nav .nav-links a::before,
+  #nav .nav-links a::before,
+  .nav-links a[data-num]::before,
+  .nav-links li a[data-num]::before {
+    display: none !important;
+    content: none !important;
+  }
+
+  /* ----- SECTION RHYTHM ----- */
+  .hero {
+    padding-top: var(--en-space-2xl) !important;
+    padding-bottom: var(--en-space-2xl) !important;
+  }
+  .overview, .track-section, .about-page,
+  .about-creds, .contact, .method-block,
+  .contact-page, .cross-link {
+    padding-top: var(--en-space-xl) !important;
+    padding-bottom: var(--en-space-xl) !important;
+  }
+
+  .section-head { margin-bottom: var(--en-space-lg) !important; }
+  .section-label, .track-section-label, .detail-line {
+    margin-bottom: var(--en-space-sm) !important;
+  }
+  .section-head h2 { margin-bottom: var(--en-space-sm) !important; }
+  .lede { max-width: 720px; }
+
+  /* ============================================
+     HERO
+     ============================================ */
+  .hero-grid { gap: var(--en-space-xl) !important; }
+
+  .hero-eyebrow { margin-bottom: var(--en-space-md) !important; }
+  .hero-left h1 { margin-bottom: var(--en-space-md) !important; }
+
+  .hero-twolines {
+    margin-bottom: var(--en-space-lg) !important;
+    padding-left: 0 !important;
+  }
+  .hero-twolines .line {
+    display: flex !important;
+    align-items: baseline !important;
+    padding: var(--en-space-2xs) 0 var(--en-space-2xs) var(--en-space-sm) !important;
+    border-left: 1px solid var(--en-gold) !important;
+    margin-bottom: var(--en-space-3xs) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 17px !important;
+    line-height: 1.5 !important;
+    color: var(--en-cream) !important;
+  }
+  .hero-twolines .label {
+    display: inline-block !important;
+    min-width: 130px !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.14em !important;
+    text-transform: uppercase !important;
+    color: var(--en-gold) !important;
+    margin-right: var(--en-space-md) !important;
+  }
+
+  .hero-statement {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-style: italic !important;
+    font-weight: 500 !important;
+    font-size: clamp(22px, 1.8vw, 28px) !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0 !important;
+    color: var(--en-gold) !important;
+    padding: var(--en-space-md) 0 !important;
+    border-top: 0.5px solid var(--en-gold-soft) !important;
+    border-bottom: 0.5px solid var(--en-gold-soft) !important;
+    margin: 0 0 var(--en-space-md) 0 !important;
+    text-align: left !important;
+    max-width: 600px !important;
+  }
+
+  .hero-support {
+    margin-bottom: var(--en-space-md) !important;
+    font-size: 17px !important;
+    line-height: 1.7 !important;
+  }
+
+  .hero-cta-row {
+    margin-bottom: var(--en-space-sm) !important;
+    gap: var(--en-space-sm) !important;
+  }
+  .btn-primary, .btn-ghost {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+    padding: 16px 32px !important;
+  }
+
+  /* ============================================
+     HERO LOCATIONS
+     ============================================ */
+  .hero-locations {
+    display: flex !important;
+    align-items: center !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 11px !important;
+    letter-spacing: 0.14em !important;
+    text-transform: uppercase !important;
+    opacity: 0.7;
+  }
+  .hero-locations span {
+    display: inline-flex !important;
+    align-items: center !important;
+    padding-right: 64px !important;
+  }
+  .hero-locations span:last-child {
+    padding-right: 0 !important;
+  }
+  .hero-locations .dot {
+    display: inline-block !important;
+    margin-right: 12px !important;
+    margin-left: 0 !important;
+  }
+
+  /* ============================================
+     HERO STAT CARD
+     ============================================ */
+  .hero-card {
+    padding: var(--en-space-lg) var(--en-space-md) !important;
+    align-self: start !important;
+    background: rgba(240, 235, 220, 0.02) !important;
+    border: 0.5px solid var(--en-gold-soft) !important;
+  }
+
+  .stat-grid {
+    gap: var(--en-space-lg) var(--en-space-md) !important;
+    border: none !important;
+  }
+  .stat-grid > .stat {
+    border: none !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    min-height: 120px !important;
+  }
+
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: clamp(48px, 5vw, 64px) !important;
+    font-weight: 500 !important;
+    line-height: 1 !important;
+    letter-spacing: -0.02em !important;
+    color: var(--en-gold) !important;
+    display: block !important;
+  }
+
+  .stat .unit {
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.15em !important;
+    text-transform: uppercase !important;
+    color: var(--en-gold-dim) !important;
+    margin-left: 12px !important;
+  }
+
+  .stat-num.compact {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: clamp(36px, 3.8vw, 48px) !important;
+    font-weight: 500 !important;
+    letter-spacing: -0.015em !important;
+    text-transform: none !important;
+    color: var(--en-gold) !important;
+  }
+
+  .stat-label {
+    margin-top: var(--en-space-sm) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    line-height: 1.5 !important;
+    opacity: 0.7;
+  }
+
+  /* ============================================
+     TRACK CARDS
+     ============================================ */
+  .track-overview-grid {
+    gap: var(--en-space-md) !important;
+    margin-top: var(--en-space-lg) !important;
+  }
+  .track-card { padding: var(--en-space-lg) !important; }
+  .track-card .track-tag {
+    margin-bottom: var(--en-space-md) !important;
+    display: inline-block !important;
+  }
+  .track-card h3 { margin-bottom: var(--en-space-sm) !important; }
+  .track-card p {
+    margin-bottom: var(--en-space-md) !important;
+    font-size: 16px !important;
+    line-height: 1.7 !important;
+  }
+  .track-card-cta { display: inline-block !important; margin-top: 0 !important; }
+
+  /* ============================================
+     INDEPENDENCE NOTE
+     ============================================ */
+  .independence-note {
+    margin: var(--en-space-lg) auto !important;
+    padding: var(--en-space-md) !important;
+    border-left: 2px solid var(--en-gold) !important;
+    background: transparent !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-right: none !important;
+    max-width: 880px !important;
+    font-size: 17px !important;
+    line-height: 1.7 !important;
+  }
+
+  /* ============================================
+     SEE MORE CTA
+     ============================================ */
+  .see-more-cta { margin-top: var(--en-space-md) !important; }
+  .see-more-cta a,
+  .see-more-cta a:link,
+  .see-more-cta a:visited {
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 12px !important;
+    letter-spacing: 0.16em !important;
+    text-transform: uppercase !important;
+    font-weight: 500 !important;
+    color: var(--en-gold) !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid var(--en-gold-soft) !important;
+    padding-bottom: 2px !important;
+    transition: color 0.2s, border-color 0.2s !important;
+  }
+  .see-more-cta a:hover,
+  .see-more-cta a:active {
+    color: var(--en-gold-hover) !important;
+    border-bottom-color: var(--en-gold) !important;
+  }
+
+  /* ============================================
+     GLOBAL LINK SAFETY NET
+     ============================================ */
+  a:link, a:visited { color: inherit; }
+
+  .track-card,
+  .track-card:link,
+  .track-card:visited {
+    color: var(--en-cream) !important;
+    text-decoration: none !important;
+  }
+  .track-card-cta,
+  .track-card-cta:link,
+  .track-card-cta:visited {
+    color: var(--en-gold) !important;
+  }
+
+  /* ============================================
+     FOOTER
+     ============================================ */
+  footer {
+    padding-top: var(--en-space-lg) !important;
+    padding-bottom: var(--en-space-lg) !important;
+  }
+  .footer-inner {
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 11px !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    opacity: 0.6;
+  }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">IN</div>
+      <div class="logo-text">
+        <span class="main">INI</span>
+        <span class="sub">IBERIAN NEXUS INVESTMENT</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">Sobre INI</a></li>
+      <li><a href="solutions.html">Soluciones</a></li>
+      <li><a href="track-01.html">Expansión Desde China</a></li>
+      <li><a href="track-02.html">Inversión en Activos</a></li>
+      <li><a href="contact.html">Contacto</a></li>
+    </ul>
+    <div class="nav-lang">
+      <a href="../index.html" class="inactive">中文</a>
+      <a href="../en/index.html" class="inactive">EN</a>
+      <span class="active">ES</span>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-left fade-in">
+        <div class="hero-eyebrow">China · Europa · Energías Renovables</div>
+        <h1>
+          Renovables China-Europa.<br>
+          <span class="accent">Ejecución Transfronteriza.</span>
+        </h1>
+
+        <div class="hero-twolines">
+          <div class="line"><span class="label">Línea 01</span>Entrada de Empresas Chinas al Mercado Europeo</div>
+          <div class="line"><span class="label">Línea 02</span>Transacciones Transfronterizas de Activos</div>
+        </div>
+
+        <div class="hero-statement">Dos líneas independientes. Una disciplina de ejecución transfronteriza.</div>
+
+        <p class="hero-support">
+          INI Investment está registrada en Madrid, España, con un equipo en Shanghái. Atendemos a dos grupos de clientes distintos: empresas chinas de energías renovables que construyen capacidad de mercado local en Europa, y propietarios de activos renovables europeos que buscan capital chino.
+        </p>
+
+        <div class="hero-cta-row">
+          <a href="solutions.html" class="btn-primary">Ver Soluciones</a>
+          <a href="contact.html" class="btn-ghost">Contacto</a>
+        </div>
+        <div class="hero-locations">
+          <span><span class="dot"></span>Madrid</span>
+          <span><span class="dot"></span>Shanghái</span>
+        </div>
+      </div>
+
+      <div class="hero-card fade-in">
+        <div class="stat-grid">
+          <div class="stat">
+            <div class="stat-num">10<span class="unit">años+</span></div>
+            <div class="stat-label">Experiencia en Renovables Europeas</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">2<span class="unit">sedes</span></div>
+            <div class="stat-label">Madrid · Shanghái</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">2<span class="unit">líneas</span></div>
+            <div class="stat-label">Expansión · Inversión</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num compact">Toda la UE</div>
+            <div class="stat-label">Base en España · Alcance UE</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRACK ENTRY -->
+<section class="overview" id="tracks">
+  <div class="container">
+    <div class="section-head fade-in">
+      <div class="section-label">Dos Líneas</div>
+      <h2 class="h-display">Identifique Su Línea.</h2>
+      <p class="lede" style="margin: 0 auto;">Las dos líneas atienden a clientes diferentes, abordan problemas distintos y siguen rutas de entrega independientes. Diríjase a la página que corresponde a su situación.</p>
+    </div>
+
+    <div class="track-overview-grid">
+      <a href="track-01.html" class="track-card fade-in">
+        <span class="track-tag">Línea 01 · Expansión Desde China</span>
+        <h3>Entrada de Empresas Chinas al Mercado Europeo</h3>
+        <p>Ayudamos a las empresas chinas de energías renovables a construir un verdadero sistema de comercialización europeo — subsistema de entidad local más estrategia y acceso a canales. De 0 a 1, de 1 a 10.</p>
+        <span class="track-card-cta">Ver Detalles de la Línea →</span>
+      </a>
+      <a href="track-02.html" class="track-card fade-in">
+        <span class="track-tag">Línea 02 · Inversión en Activos</span>
+        <h3>Transacciones Transfronterizas de Activos</h3>
+        <p>Coordinación integral desde la selección hasta la financiación. Conectamos activos renovables europeos con capital chino, aplicando el rigor de due diligence que exigen los inversores institucionales.</p>
+        <span class="track-card-cta">Ver Detalles de la Línea →</span>
+      </a>
+    </div>
+
+    <div class="independence-note fade-in">
+      Ambas líneas operan en el espacio de las renovables China-Europa, pero a nivel de ejecución son <strong>plenamente independientes</strong> — distintos tipos de cliente, estructuras de contrato, rutas de entrega y modelos de negocio.
+    </div>
+
+    <div class="see-more-cta fade-in">
+      <a href="solutions.html">Ver la Visión General Completa de Soluciones y los Límites de Cada Línea →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT BRIEF -->
+<section class="overview" style="border-top: none;">
+  <div class="container">
+    <div class="section-head fade-in">
+      <div class="section-label">Sobre INI</div>
+      <h2 class="h-display">No Somos Intermediarios.<br><span class="gold">Ejecutamos Sobre el Terreno.</span></h2>
+      <p class="lede" style="margin: 0 auto;">
+        Iberian Nexus Investment SL está registrada en Madrid, España, con un equipo en Shanghái. Nuestro equipo principal aporta más de 10 años de experiencia integral en la cadena de valor de renovables europeas — abarcando PV, almacenamiento de energía y eólica en desarrollo, EPC y fabricación de equipos. Con base en España, operando en toda la UE.
+      </p>
+      <div class="see-more-cta fade-in" style="margin-top: var(--en-space-md);">
+        <a href="about.html">Conozca Más Sobre INI →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <span>© 2026 Iberian Nexus Investment SL · Madrid · Shanghái</span>
+      <span>EN · 中文 · ES</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 30) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 50);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

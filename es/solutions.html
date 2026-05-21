@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soluciones | INI Investment</title>
+<meta name="description" content="Dos líneas independientes. Una disciplina de ejecución transfronteriza. Entrada al mercado desde China y transacciones transfronterizas de activos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../ini-styles.css">
+<style>
+  :root {
+    --en-space-3xs: 4px;
+    --en-space-2xs: 8px;
+    --en-space-xs: 16px;
+    --en-space-sm: 24px;
+    --en-space-md: 40px;
+    --en-space-lg: 64px;
+    --en-space-xl: 96px;
+    --en-space-2xl: 128px;
+    --en-gold: #C8A04C;
+    --en-gold-hover: #E0B860;
+    --en-gold-soft: rgba(200, 160, 76, 0.2);
+    --en-gold-faint: rgba(200, 160, 76, 0.12);
+    --en-gold-dim: rgba(200, 160, 76, 0.55);
+    --en-cream: #F0EBDC;
+    --en-cream-dim: rgba(240, 235, 220, 0.7);
+  }
+
+  /* BODY */
+  body, p, .lede, .track-card p, .boundary-list li,
+  .selector-q, .selector-trigger, .independence-note,
+  .commitment-formula-lede, .formula-text,
+  .milestone-actions li, .pillar p, .see-more-cta a {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-weight: 400;
+  }
+  body { font-size: 16px; line-height: 1.7; }
+  p { font-size: 17px; line-height: 1.7; }
+  .lede { font-size: 20px !important; line-height: 1.6 !important; font-weight: 400 !important; }
+
+  /* DISPLAY */
+  h1, h2, h3, h4, h5, .h-display, .logo-text .main {
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif !important;
+    font-weight: 500 !important;
+  }
+  h1 { font-size: clamp(48px, 5.5vw, 76px) !important; line-height: 1.08 !important; letter-spacing: -0.015em !important; }
+  .h-display, h2 { font-size: clamp(36px, 4vw, 52px) !important; line-height: 1.15 !important; letter-spacing: -0.01em !important; }
+  h3 { font-size: 28px !important; line-height: 1.25 !important; }
+  h4 { font-size: 22px !important; line-height: 1.3 !important; }
+  h5 { font-size: 18px !important; line-height: 1.4 !important; }
+
+  /* MONO */
+  .section-label, .detail-line, .track-section-label,
+  .boundary-label, .track-tag, .formula-tag,
+  .milestone-dot, .pillar-num, .selector-arrow,
+  .nav-lang, .logo-text .sub, .see-more-cta a {
+    font-family: 'JetBrains Mono', monospace !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.14em !important;
+  }
+  .section-label, .detail-line, .track-section-label,
+  .boundary-label, .track-tag, .formula-tag {
+    font-size: 11px !important;
+    font-weight: 500 !important;
+  }
+  .nav-lang { font-size: 12px !important; letter-spacing: 0.1em !important; }
+  .see-more-cta a { font-size: 12px !important; letter-spacing: 0.16em !important; }
+
+  /* NAV */
+  .nav-links {
+    display: flex !important; flex-direction: row !important;
+    align-items: center !important; list-style: none !important;
+    padding: 0 !important; margin: 0 !important;
+  }
+  .nav-links li {
+    margin: 0 !important; padding: 0 32px 0 0 !important;
+    list-style: none !important; display: inline-flex !important;
+    align-items: center !important;
+  }
+  .nav-links li:last-child { padding-right: 0 !important; }
+  .nav-links a {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 13px !important; font-weight: 500 !important;
+    letter-spacing: 0.14em !important; text-transform: uppercase !important;
+    padding: 0 !important; white-space: nowrap !important;
+  }
+  .nav-links a::before, .nav-links li a::before,
+  nav .nav-links a::before, #nav .nav-links a::before,
+  .nav-links a[data-num]::before, .nav-links li a[data-num]::before {
+    display: none !important; content: none !important;
+  }
+
+  /* SECTION RHYTHM */
+  .detail-hero {
+    padding-top: var(--en-space-2xl) !important;
+    padding-bottom: var(--en-space-xl) !important;
+  }
+  .track-section, .method-block {
+    padding-top: var(--en-space-xl) !important;
+    padding-bottom: var(--en-space-xl) !important;
+  }
+  .section-head { margin-bottom: var(--en-space-lg) !important; }
+  .section-head.center { text-align: center; }
+  .section-head.center .lede { margin-left: auto; margin-right: auto; }
+  .section-label, .track-section-label, .detail-line {
+    margin-bottom: var(--en-space-sm) !important;
+  }
+  .section-head h2 { margin-bottom: var(--en-space-sm) !important; }
+  .lede { max-width: 720px; }
+
+  /* HERO */
+  .detail-hero-inner { max-width: 880px; }
+  .detail-hero-inner .detail-line { margin-bottom: var(--en-space-md) !important; }
+  .detail-hero-inner h1 { margin-bottom: var(--en-space-md) !important; }
+  .detail-hero-inner p {
+    margin-top: var(--en-space-md) !important;
+    font-size: 19px !important;
+    color: var(--en-cream-dim) !important;
+  }
+  .mini-divider {
+    width: 60px; height: 1px;
+    background: var(--en-gold); opacity: 0.5;
+    margin: var(--en-space-md) 0;
+  }
+
+  /* TRACK CARDS */
+  .track-card { padding: var(--en-space-lg) !important; }
+  .track-card .track-tag { margin-bottom: var(--en-space-md) !important; display: inline-block !important; }
+  .track-card h3 { margin-bottom: var(--en-space-sm) !important; }
+  .track-card p { margin-bottom: var(--en-space-md) !important; font-size: 16px !important; }
+
+  /* SEE MORE */
+  .see-more-cta { margin-top: var(--en-space-md) !important; }
+  .see-more-cta a,
+  .see-more-cta a:link,
+  .see-more-cta a:visited {
+    color: var(--en-gold) !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid var(--en-gold-soft) !important;
+    padding-bottom: 2px !important;
+    transition: color 0.2s, border-color 0.2s !important;
+  }
+  .see-more-cta a:hover {
+    color: var(--en-gold-hover) !important;
+    border-bottom-color: var(--en-gold) !important;
+  }
+
+  /* INDEPENDENCE NOTE */
+  .independence-note {
+    margin: var(--en-space-lg) auto !important;
+    padding: var(--en-space-md) !important;
+    border-left: 2px solid var(--en-gold) !important;
+    background: transparent !important;
+    max-width: 880px !important;
+    font-size: 17px !important;
+    line-height: 1.7 !important;
+  }
+
+  /* BOUNDARY */
+  .boundary {
+    display: grid !important; grid-template-columns: 1fr 1fr !important;
+    gap: var(--en-space-md) !important;
+    max-width: 1080px !important; margin: 0 auto !important;
+  }
+  .boundary-card {
+    padding: var(--en-space-lg) !important;
+    border: 0.5px solid var(--en-gold-soft) !important;
+    background: rgba(240, 235, 220, 0.02) !important;
+  }
+  .boundary-label {
+    color: var(--en-gold) !important;
+    margin-bottom: var(--en-space-sm) !important;
+    display: block !important;
+  }
+  .boundary-card h4 {
+    margin-bottom: var(--en-space-md) !important;
+    color: var(--en-cream) !important;
+  }
+  .boundary-list {
+    list-style: none !important; padding: 0 !important; margin: 0 !important;
+  }
+  .boundary-list li {
+    padding: 8px 0 8px 20px !important;
+    position: relative !important;
+    font-size: 15px !important; line-height: 1.6 !important;
+    color: var(--en-cream-dim) !important;
+  }
+  .boundary-list li::before {
+    content: "·" !important; position: absolute !important;
+    left: 4px !important; color: var(--en-gold) !important;
+    font-size: 20px !important; line-height: 1 !important;
+  }
+
+  /* SELECTOR */
+  .selector {
+    display: grid !important; grid-template-columns: 1fr 1fr !important;
+    gap: var(--en-space-md) !important;
+    max-width: 1080px !important; margin: 0 auto !important;
+  }
+  .selector-card {
+    padding: var(--en-space-lg) !important;
+    border: 0.5px solid var(--en-gold-soft) !important;
+    background: rgba(240, 235, 220, 0.02) !important;
+    text-decoration: none !important;
+    display: block !important;
+    transition: border-color 0.2s, background 0.2s !important;
+  }
+  .selector-card:hover {
+    border-color: var(--en-gold) !important;
+    background: rgba(240, 235, 220, 0.04) !important;
+  }
+  .selector-q {
+    font-size: 14px !important;
+    color: var(--en-cream-dim) !important;
+    margin-bottom: var(--en-space-2xs) !important;
+  }
+  .selector-trigger {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 22px !important; font-weight: 500 !important;
+    line-height: 1.3 !important;
+    color: var(--en-cream) !important;
+    margin-bottom: var(--en-space-md) !important;
+  }
+  .selector-arrow {
+    color: var(--en-gold) !important;
+    font-size: 12px !important;
+    letter-spacing: 0.16em !important;
+    display: block !important;
+  }
+
+  /* COMMITMENT FORMULA */
+  .commitment-formula {
+    max-width: 1080px !important;
+    margin: var(--en-space-lg) auto !important;
+  }
+  .commitment-formula-lede {
+    text-align: center !important;
+    font-size: 16px !important;
+    color: var(--en-cream-dim) !important;
+    margin-bottom: var(--en-space-md) !important;
+  }
+  .formula {
+    display: flex !important;
+    align-items: stretch !important;
+    justify-content: center !important;
+    gap: var(--en-space-2xs) !important;
+    flex-wrap: wrap !important;
+  }
+  .formula-block {
+    flex: 1 1 160px !important;
+    padding: var(--en-space-md) var(--en-space-sm) !important;
+    border: 0.5px solid var(--en-gold-soft) !important;
+    background: rgba(240, 235, 220, 0.02) !important;
+    text-align: center !important;
+    min-width: 160px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .formula-block.result {
+    border-color: var(--en-gold) !important;
+    background: rgba(200, 160, 76, 0.06) !important;
+  }
+  .formula-icon {
+    color: var(--en-gold) !important;
+    margin-bottom: var(--en-space-sm) !important;
+    display: block !important;
+  }
+  .formula-icon svg {
+    width: 24px !important;
+    height: 24px !important;
+    display: block !important;
+  }
+  .formula-tag {
+    color: var(--en-gold) !important;
+    display: block !important;
+    margin-bottom: var(--en-space-sm) !important;
+  }
+  .formula-text {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    color: var(--en-cream) !important;
+  }
+  .formula-op {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 28px !important;
+    color: var(--en-gold) !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 var(--en-space-2xs) !important;
+  }
+
+  /* MILESTONES */
+  .milestones {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: var(--en-space-md) !important;
+    max-width: 1080px !important;
+    margin: var(--en-space-xl) auto !important;
+  }
+  .milestone {
+    padding: var(--en-space-lg) !important;
+    border: 0.5px solid var(--en-gold-soft) !important;
+    background: rgba(240, 235, 220, 0.02) !important;
+  }
+  .milestone-dot {
+    color: var(--en-gold) !important;
+    font-size: 12px !important;
+    margin-bottom: var(--en-space-sm) !important;
+    display: block !important;
+  }
+  .milestone-title {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 22px !important;
+    font-weight: 500 !important;
+    color: var(--en-cream) !important;
+    margin-bottom: var(--en-space-md) !important;
+  }
+  .milestone-actions {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .milestone-actions li {
+    padding: 6px 0 6px 16px !important;
+    position: relative !important;
+    font-size: 14px !important;
+    color: var(--en-cream-dim) !important;
+  }
+  .milestone-actions li::before {
+    content: "·" !important;
+    position: absolute !important;
+    left: 4px !important;
+    color: var(--en-gold) !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+  }
+
+  /* PILLARS */
+  .pillars {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: var(--en-space-md) !important;
+    max-width: 1080px !important;
+    margin: var(--en-space-xl) auto 0 !important;
+  }
+  .pillar {
+    padding: var(--en-space-lg) var(--en-space-md) !important;
+  }
+  .pillar-num {
+    color: var(--en-gold) !important;
+    font-size: 12px !important;
+    margin-bottom: var(--en-space-sm) !important;
+    display: block !important;
+  }
+  .pillar h4 {
+    margin-bottom: var(--en-space-sm) !important;
+    color: var(--en-cream) !important;
+  }
+  .pillar p {
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+    color: var(--en-cream-dim) !important;
+  }
+
+  a:link, a:visited { color: inherit; }
+
+  /* FOOTER */
+  footer {
+    padding-top: var(--en-space-lg) !important;
+    padding-bottom: var(--en-space-lg) !important;
+  }
+  .footer-inner {
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 11px !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    opacity: 0.6;
+  }
+
+  @media (max-width: 900px) {
+    .boundary, .selector, .milestones, .pillars { grid-template-columns: 1fr !important; }
+    .formula { flex-direction: column !important; align-items: stretch !important; }
+    .formula-op { justify-content: center !important; padding: var(--en-space-2xs) !important; }
+  }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">IN</div>
+      <div class="logo-text">
+        <span class="main">INI</span>
+        <span class="sub">IBERIAN NEXUS INVESTMENT</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">Sobre INI</a></li>
+      <li><a href="solutions.html" class="current">Soluciones</a></li>
+      <li><a href="track-01.html">Expansión Desde China</a></li>
+      <li><a href="track-02.html">Inversión en Activos</a></li>
+      <li><a href="contact.html">Contacto</a></li>
+    </ul>
+    <div class="nav-lang">
+      <a href="../solutions.html" class="inactive">中文</a>
+      <a href="../en/solutions.html" class="inactive">EN</a>
+      <span class="active">ES</span>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="detail-hero">
+  <div class="container">
+    <div class="detail-hero-inner fade-in">
+      <div class="detail-line">Soluciones</div>
+      <h1>Dos Líneas Independientes.<br>Una <span class="gold">Disciplina de Ejecución Transfronteriza.</span></h1>
+      <div class="mini-divider"></div>
+      <p>INI Investment opera dos líneas de negocio independientes. Atienden a clientes diferentes, resuelven problemas distintos y siguen rutas de entrega independientes — pero ambas se apoyan en el mismo conjunto de capacidades fundamentales y disciplina de gestión de proyectos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LÍNEA 01 -->
+<section class="track-section alt">
+  <div class="container">
+    <div class="track-section-label">Línea 01 · Expansión Desde China</div>
+    <div class="stages fade-in" style="margin-bottom: 3rem;">
+      <div class="track-card" style="background: transparent; border: 0.5px solid var(--en-gold);">
+        <span class="track-tag">Línea 01</span>
+        <h3>Entrada de Empresas Chinas al Mercado Europeo</h3>
+        <p>Ayudamos a las empresas chinas de energías renovables a construir un verdadero sistema de comercialización europeo — subsistema de entidad local más estrategia y acceso a canales.</p>
+        <p style="margin-bottom: 0;">
+          <strong style="color: var(--en-gold); font-weight: 500;">Clientes objetivo:</strong> fabricantes chinos de energías renovables, plataformas de expansión de gobiernos locales y empresas chinas ya presentes en Europa pero estancadas en su crecimiento.
+        </p>
+      </div>
+    </div>
+    <div class="see-more-cta fade-in">
+      <a href="track-01.html">Ver la Página Completa de la Línea 01 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- LÍNEA 02 -->
+<section class="track-section">
+  <div class="container">
+    <div class="track-section-label">Línea 02 · Inversión en Activos</div>
+    <div class="stages fade-in" style="margin-bottom: 3rem;">
+      <div class="track-card" style="background: rgba(240, 235, 220, 0.02); border: 0.5px solid var(--en-gold);">
+        <span class="track-tag">Línea 02</span>
+        <h3>Transacciones Transfronterizas de Activos</h3>
+        <p>Coordinación integral desde la selección hasta la financiación. Conectamos activos renovables europeos con capital chino, aplicando el rigor de due diligence que exigen los inversores institucionales.</p>
+        <p style="margin-bottom: 0;">
+          <strong style="color: var(--en-gold); font-weight: 500;">Clientes objetivo:</strong> inversores de empresas públicas chinas, capital industrial privado, fondos; promotores de proyectos europeos, EPC, integradores de sistemas, bancos de inversión / FA.
+        </p>
+      </div>
+    </div>
+    <div class="see-more-cta fade-in">
+      <a href="track-02.html">Ver la Página Completa de la Línea 02 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- BOUNDARY -->
+<section class="track-section alt">
+  <div class="container">
+    <div class="track-section-label">Límites Entre las Dos Líneas</div>
+    <div class="section-head center fade-in" style="margin-bottom: 2.5rem;">
+      <h2 class="h-display">Definición de <span class="gold">Límites</span></h2>
+      <p class="lede">Esto no es un "descargo de responsabilidad" que debilite nuestra oferta — es la expresión profesional de cómo asumimos nuestra responsabilidad con los clientes.</p>
+    </div>
+
+    <div class="boundary fade-in">
+      <div class="boundary-card">
+        <div class="boundary-label">Lo Que Se Comparte</div>
+        <h4>Capacidades Fundamentales Comunes</h4>
+        <ul class="boundary-list">
+          <li>Equipo de doble lado China-Europa y coordinación entre zonas horarias</li>
+          <li>Comprensión del sector de renovables europeas y red local</li>
+          <li>Capacidad de gestión de proyectos interculturales</li>
+          <li>Conciencia de documentación de cumplimiento y puntos de decisión</li>
+          <li>Disciplina de transacción y ejecución</li>
+        </ul>
+      </div>
+      <div class="boundary-card">
+        <div class="boundary-label">Lo Que No Se Comparte</div>
+        <h4>Sistemas Operativos Independientes</h4>
+        <ul class="boundary-list">
+          <li>Tipos de cliente y cadenas de decisión</li>
+          <li>Procesos de negocio y entregables</li>
+          <li>Estructuras de contrato y modelos de negocio</li>
+          <li>Lógica de riesgo y metodología de control</li>
+          <li>Composición del equipo y ritmo de ejecución</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="independence-note fade-in" style="margin-top: 3rem;">
+      Las dos líneas <strong>no se basan en el flujo cruzado de clientes ni en la vinculación entre sí</strong>. No vendemos servicios de inversión a los clientes de expansión, ni esperamos que los clientes del lado de los activos consideren la localización de fabricación — salvo que el cliente lo plantee y el escenario realmente encaje.
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO ELEGIR -->
+<section class="track-section">
+  <div class="container">
+    <div class="track-section-label">Cómo Elegir</div>
+    <div class="section-head center fade-in" style="margin-bottom: 2.5rem;">
+      <h2 class="h-display">¿Qué Línea <span class="gold">Le Corresponde</span>?</h2>
+    </div>
+
+    <div class="selector fade-in">
+      <a href="track-01.html" class="selector-card">
+        <div class="selector-q">Si se enfrenta a</div>
+        <div class="selector-trigger">Problemas de producto, canal, equipo, localización u operación de mercado a largo plazo</div>
+        <span class="selector-arrow">Línea 01 · Expansión Desde China →</span>
+      </a>
+      <a href="track-02.html" class="selector-card">
+        <div class="selector-q">Si se enfrenta a</div>
+        <div class="selector-trigger">Problemas de proyecto, activo, inversión, salida, M&amp;A o transacción transfronteriza</div>
+        <span class="selector-arrow">Línea 02 · Inversión en Activos →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- DISCIPLINA DE ENTREGA -->
+<section class="method-block track-section alt">
+  <div class="container">
+    <div class="section-head center fade-in">
+      <div class="section-label">Disciplina de Entrega</div>
+      <h2 class="h-display">Una <span class="gold">Disciplina de Ejecución Transfronteriza</span></h2>
+      <p class="lede">
+        Las dos líneas entregan por rutas diferentes pero comparten una misma disciplina de gestión de proyectos. No hacemos consultoría abierta ni intermediación sin cierre — cada compromiso de entrega se descompone de manera ingenieril.
+      </p>
+    </div>
+
+    <div class="commitment-formula fade-in">
+      <p class="commitment-formula-lede">Cada compromiso de entrega se define por tres elementos explícitos:</p>
+      <div class="formula">
+        <div class="formula-block">
+          <span class="formula-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <circle cx="6" cy="12" r="2" fill="currentColor"/>
+              <circle cx="12" cy="12" r="2.4" fill="none"/>
+              <circle cx="18" cy="12" r="2" fill="none" opacity="0.5"/>
+            </svg>
+          </span>
+          <div class="formula-tag">A · Etapa</div>
+          <div class="formula-text">Milestone<br>Definición clara de fases</div>
+        </div>
+        <div class="formula-op">+</div>
+        <div class="formula-block">
+          <span class="formula-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 3 L15 3 L19 7 L19 21 L6 21 Z"/>
+              <path d="M15 3 L15 7 L19 7"/>
+              <path d="M9 13 L11 15 L15 11"/>
+            </svg>
+          </span>
+          <div class="formula-tag">B · Entregable</div>
+          <div class="formula-text">Deliverable<br>Resultado definido</div>
+        </div>
+        <div class="formula-op">+</div>
+        <div class="formula-block">
+          <span class="formula-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="3.5"/>
+              <path d="M5 21 C5 16.5 8 14 12 14 C16 14 19 16.5 19 21"/>
+              <circle cx="12" cy="8" r="0.8" fill="currentColor"/>
+            </svg>
+          </span>
+          <div class="formula-tag">C · Responsable</div>
+          <div class="formula-text">Owner<br>Responsabilidad designada</div>
+        </div>
+        <div class="formula-op">=</div>
+        <div class="formula-block result">
+          <span class="formula-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/>
+              <circle cx="12" cy="12" r="6.5" opacity="0.4"/>
+              <path d="M8.5 12.5 L11 15 L15.5 9.5" stroke-width="1.6"/>
+            </svg>
+          </span>
+          <div class="formula-tag">Resultado</div>
+          <div class="formula-text">Entrega ingenieril<br>y auditable</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="milestones fade-in">
+      <div class="milestone">
+        <div class="milestone-dot">M1</div>
+        <div class="milestone-title">Fijación del Alcance</div>
+        <ul class="milestone-actions">
+          <li>Confirmación de objetivos y límites</li>
+          <li>Lista de entregables</li>
+          <li>Matriz de responsabilidades</li>
+        </ul>
+      </div>
+      <div class="milestone">
+        <div class="milestone-dot">M2</div>
+        <div class="milestone-title">Ejecución por Etapas</div>
+        <ul class="milestone-actions">
+          <li>Mecanismo de revisión por hitos</li>
+          <li>Documentación del avance</li>
+          <li>Alerta de riesgos y mitigación</li>
+        </ul>
+      </div>
+      <div class="milestone">
+        <div class="milestone-dot">M3</div>
+        <div class="milestone-title">Cierre y Continuidad</div>
+        <ul class="milestone-actions">
+          <li>Aceptación y archivo</li>
+          <li>Inicio de la coordinación post-cierre</li>
+          <li>Mecanismo de soporte a largo plazo</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar fade-in">
+        <div class="pillar-num">01</div>
+        <h4><span class="accent" style="color: var(--en-gold);">Descomposición Ingenieril</span>, no Acompañamiento</h4>
+        <p>La complejidad transfronteriza se descompone en tareas ejecutables por etapas, cada una con un resultado definido y un criterio de salida.</p>
+      </div>
+      <div class="pillar fade-in">
+        <div class="pillar-num">02</div>
+        <h4><span class="accent" style="color: var(--en-gold);">Entrega Conforme</span>, Auditable y Archivable</h4>
+        <p>Sistemas de documentación, puntos de decisión y trazas de aprobación — diseñados conforme a los requisitos de cumplimiento de la inversión exterior de las empresas públicas chinas.</p>
+      </div>
+      <div class="pillar fade-in">
+        <div class="pillar-num">03</div>
+        <h4><span class="accent" style="color: var(--en-gold);">Doble Profundidad</span>, Ambos Lados Presentes</h4>
+        <p>El lado chino aporta comprensión industrial; el lado europeo entrega ejecución local. No es un agente unilateral — es una colaboración con ambos lados presentes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <span>© 2026 Iberian Nexus Investment SL · Madrid · Shanghái</span>
+      <span>EN · 中文 · ES</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 30) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 50);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

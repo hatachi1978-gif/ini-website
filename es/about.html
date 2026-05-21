@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre INI | Plataforma de Ejecución Transfronteriza China-Europa</title>
+<meta name="description" content="Iberian Nexus Investment SL — No somos intermediarios. Ejecutamos sobre el terreno. Equipo con más de 10 años de experiencia en renovables europeas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../ini-styles.css">
+<style>
+  :root {
+    --en-space-3xs: 4px;
+    --en-space-2xs: 8px;
+    --en-space-xs: 16px;
+    --en-space-sm: 24px;
+    --en-space-md: 40px;
+    --en-space-lg: 64px;
+    --en-space-xl: 96px;
+    --en-space-2xl: 128px;
+    --en-gold: #C8A04C;
+    --en-gold-hover: #E0B860;
+    --en-gold-soft: rgba(200, 160, 76, 0.2);
+    --en-gold-faint: rgba(200, 160, 76, 0.12);
+    --en-gold-dim: rgba(200, 160, 76, 0.55);
+    --en-cream: #F0EBDC;
+    --en-cream-dim: rgba(240, 235, 220, 0.7);
+  }
+
+  body, p, .lede, .cred-label, .about-body p {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-weight: 400;
+  }
+  body { font-size: 16px; line-height: 1.7; }
+  p { font-size: 17px; line-height: 1.7; }
+  .lede { font-size: 20px !important; line-height: 1.6 !important; font-weight: 400 !important; }
+
+  h1, h2, h3, h4, h5, .h-display, .about-tagline, .logo-text .main {
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif !important;
+    font-weight: 500 !important;
+  }
+  h1 { font-size: clamp(48px, 5.5vw, 76px) !important; line-height: 1.08 !important; letter-spacing: -0.015em !important; }
+  .h-display, h2 { font-size: clamp(36px, 4vw, 52px) !important; line-height: 1.15 !important; letter-spacing: -0.01em !important; }
+  h3 { font-size: 28px !important; line-height: 1.25 !important; }
+
+  .section-label, .detail-line, .office-flag, .email-label,
+  .nav-lang, .logo-text .sub {
+    font-family: 'JetBrains Mono', monospace !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.14em !important;
+  }
+  .section-label, .detail-line { font-size: 11px !important; font-weight: 500 !important; }
+  .nav-lang { font-size: 12px !important; letter-spacing: 0.1em !important; }
+
+  /* NAV */
+  .nav-links {
+    display: flex !important; flex-direction: row !important;
+    align-items: center !important; list-style: none !important;
+    padding: 0 !important; margin: 0 !important;
+  }
+  .nav-links li {
+    margin: 0 !important; padding: 0 32px 0 0 !important;
+    list-style: none !important; display: inline-flex !important;
+    align-items: center !important;
+  }
+  .nav-links li:last-child { padding-right: 0 !important; }
+  .nav-links a {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 13px !important; font-weight: 500 !important;
+    letter-spacing: 0.14em !important; text-transform: uppercase !important;
+    padding: 0 !important; white-space: nowrap !important;
+  }
+  .nav-links a::before, .nav-links li a::before,
+  nav .nav-links a::before, #nav .nav-links a::before,
+  .nav-links a[data-num]::before, .nav-links li a[data-num]::before {
+    display: none !important; content: none !important;
+  }
+
+  /* ABOUT */
+  .about-page {
+    padding-top: var(--en-space-2xl) !important;
+    padding-bottom: var(--en-space-xl) !important;
+  }
+  .about-creds {
+    padding-top: var(--en-space-xl) !important;
+    padding-bottom: var(--en-space-xl) !important;
+    border-top: 0.5px solid var(--en-gold-soft);
+  }
+
+  .about-hero { margin-bottom: var(--en-space-xl) !important; }
+  .about-hero .detail-line { margin-bottom: var(--en-space-md) !important; }
+  .about-hero h1 { margin-bottom: var(--en-space-md) !important; }
+
+  .mini-divider {
+    width: 60px; height: 1px;
+    background: var(--en-gold); opacity: 0.5;
+    margin-top: var(--en-space-md);
+    margin-bottom: var(--en-space-md);
+  }
+
+  .about-body { max-width: 800px; margin: 0 auto; }
+  .about-body p {
+    margin-bottom: var(--en-space-md) !important;
+    font-size: 17px !important;
+    line-height: 1.75 !important;
+  }
+  .about-body strong { color: var(--en-cream); font-weight: 500; }
+
+  .about-tagline {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-style: italic !important;
+    font-weight: 500 !important;
+    font-size: clamp(24px, 2.2vw, 32px) !important;
+    line-height: 1.4 !important;
+    color: var(--en-gold) !important;
+    padding: var(--en-space-md) 0 !important;
+    border-top: 0.5px solid var(--en-gold-soft) !important;
+    border-bottom: 0.5px solid var(--en-gold-soft) !important;
+    margin: var(--en-space-lg) 0 0 0 !important;
+  }
+
+  .section-head { margin-bottom: var(--en-space-lg) !important; }
+  .section-head.center { text-align: center; }
+  .section-head.center .lede { margin-left: auto; margin-right: auto; }
+  .section-label { margin-bottom: var(--en-space-sm) !important; }
+  .section-head h2 { margin-bottom: var(--en-space-sm) !important; }
+  .lede { max-width: 720px; }
+
+  /* CREDS GRID */
+  .credentials-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: var(--en-space-md) !important;
+    margin-top: var(--en-space-lg) !important;
+  }
+  .cred {
+    padding: var(--en-space-md) var(--en-space-sm) !important;
+    border: 0.5px solid var(--en-gold-soft) !important;
+    background: rgba(240, 235, 220, 0.02) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    min-height: 200px !important;
+    justify-content: space-between !important;
+  }
+  .cred-icon {
+    color: var(--en-gold) !important;
+    margin-bottom: var(--en-space-md) !important;
+    display: block !important;
+  }
+  .cred-icon svg {
+    width: 40px !important;
+    height: 40px !important;
+    display: block !important;
+  }
+  .cred-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    flex: 1 !important;
+    justify-content: flex-start !important;
+  }
+  .cred-value {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 32px !important;
+    font-weight: 500 !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.01em !important;
+    color: var(--en-gold) !important;
+  }
+  .cred-value.small { font-size: 24px !important; line-height: 1.2 !important; }
+  .cred-label {
+    margin-top: var(--en-space-sm) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    line-height: 1.5 !important;
+    opacity: 0.7;
+  }
+
+  a:link, a:visited { color: inherit; }
+
+  footer {
+    padding-top: var(--en-space-lg) !important;
+    padding-bottom: var(--en-space-lg) !important;
+  }
+  .footer-inner {
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 11px !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    opacity: 0.6;
+  }
+
+  @media (max-width: 900px) {
+    .credentials-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">IN</div>
+      <div class="logo-text">
+        <span class="main">INI</span>
+        <span class="sub">IBERIAN NEXUS INVESTMENT</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html" class="current">Sobre INI</a></li>
+      <li><a href="solutions.html">Soluciones</a></li>
+      <li><a href="track-01.html">Expansión Desde China</a></li>
+      <li><a href="track-02.html">Inversión en Activos</a></li>
+      <li><a href="contact.html">Contacto</a></li>
+    </ul>
+    <div class="nav-lang">
+      <a href="../about.html" class="inactive">中文</a>
+      <a href="../en/about.html" class="inactive">EN</a>
+      <span class="active">ES</span>
+    </div>
+  </div>
+</nav>
+
+<section class="about-page">
+  <div class="container">
+    <div class="about-hero fade-in">
+      <div class="detail-line">Sobre INI</div>
+      <h1>No Somos Intermediarios.<br>Ejecutamos Sobre el <span class="gold">Terreno.</span></h1>
+      <div class="mini-divider"></div>
+    </div>
+
+    <div class="about-body fade-in">
+      <p><strong>Iberian Nexus Investment SL</strong> está registrada en Madrid, España, con un equipo en Shanghái. Nos especializamos en la ejecución transfronteriza en el sector de energías renovables China-Europa, operando dos líneas de negocio independientes: entrada al mercado europeo y localización para empresas chinas de energías renovables, y conexión de inversión transfronteriza entre activos renovables europeos y capital chino.</p>
+
+      <p>Nuestro equipo principal aporta <strong>más de 10 años de experiencia integral en la cadena de valor de renovables europeas</strong> — abarcando PV, almacenamiento de energía y eólica en desarrollo, EPC y fabricación de equipos. Con base en Madrid, operando en los principales mercados europeos.</p>
+
+      <p>Nuestro socio europeo garantiza la ejecución localizada en el lado europeo; el equipo de Shanghái se coordina con el capital chino y las cadenas de suministro. Desde la primera presentación hasta la primera entrega, recorremos cada paso junto a usted — sin difuminar las fronteras entre las dos líneas, y sin utilizar una como palanca para la otra.</p>
+
+      <p>Creemos que los negocios transfronterizos no deben comercializarse como "consultoría de acompañamiento integral" ni como una "plataforma todo en uno". La complejidad debe descomponerse en tareas ejecutables por etapas — cada una con un entregable definido, un responsable definido y un criterio de salida definido.</p>
+
+      <div class="about-tagline">
+        Un equipo. Dos zonas horarias.<br>
+        <span class="gold">Una disciplina de ejecución transfronteriza.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-creds">
+  <div class="container">
+    <div class="section-head center fade-in">
+      <div class="section-label">Capacidades Fundamentales</div>
+      <h2 class="h-display">Nuestra <span class="gold">Base</span></h2>
+      <p class="lede">Estas capacidades sustentan ambas líneas simultáneamente, pero las dos líneas permanecen independientes en cuanto a tipo de cliente, proceso, documentación y modelo de negocio.</p>
+    </div>
+
+    <div class="credentials-grid fade-in">
+      <div class="cred">
+        <span class="cred-icon" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="10" y1="4" x2="30" y2="4"/><line x1="10" y1="36" x2="30" y2="36"/>
+            <path d="M11 4 L11 9 L20 20 L11 31 L11 36"/><path d="M29 4 L29 9 L20 20 L29 31 L29 36"/>
+            <path d="M13 7 L27 7 L20 17 Z" fill="currentColor" stroke="none" opacity="0.55"/>
+            <path d="M14 33 L26 33 L20 25 Z" fill="currentColor" stroke="none" opacity="0.35"/>
+            <circle cx="20" cy="22" r="0.9" fill="currentColor"/>
+          </svg>
+        </span>
+        <div class="cred-content">
+          <div class="cred-value">10+</div>
+          <div class="cred-label">años de experiencia en el sector</div>
+        </div>
+      </div>
+      <div class="cred">
+        <span class="cred-icon" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 25 C9 19 4 17 4 13 A5 5 0 0 1 14 13 C14 17 9 19 9 25 Z"/>
+            <circle cx="9" cy="13" r="1.6" fill="currentColor"/>
+            <path d="M31 25 C31 19 26 17 26 13 A5 5 0 0 1 36 13 C36 17 31 19 31 25 Z"/>
+            <circle cx="31" cy="13" r="1.6" fill="currentColor"/>
+            <path d="M12 11 Q20 2 28 11" stroke-dasharray="2 2"/>
+            <line x1="3" y1="32" x2="37" y2="32" opacity="0.4"/>
+          </svg>
+        </span>
+        <div class="cred-content">
+          <div class="cred-value small">Madrid · Shanghái</div>
+          <div class="cred-label">doble sede</div>
+        </div>
+      </div>
+      <div class="cred">
+        <span class="cred-icon" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="20" cy="20" r="15"/><ellipse cx="20" cy="20" rx="15" ry="5.5"/>
+            <ellipse cx="20" cy="20" rx="5.5" ry="15"/>
+            <path d="M20 8 L22 20 L20 20 Z" fill="currentColor" stroke="none"/>
+            <path d="M20 32 L18 20 L20 20 Z" fill="none"/>
+            <circle cx="20" cy="20" r="1.3" fill="currentColor"/>
+          </svg>
+        </span>
+        <div class="cred-content">
+          <div class="cred-value small">Toda Europa</div>
+          <div class="cred-label">base madrid · alcance europeo</div>
+        </div>
+      </div>
+      <div class="cred">
+        <span class="cred-icon" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="8" cy="12" r="3"/><line x1="8" y1="6" x2="8" y2="8"/><line x1="8" y1="16" x2="8" y2="18"/>
+            <line x1="2" y1="12" x2="4" y2="12"/><line x1="12" y1="12" x2="14" y2="12"/>
+            <line x1="3.8" y1="7.8" x2="5.2" y2="9.2"/><line x1="10.8" y1="14.8" x2="12.2" y2="16.2"/>
+            <line x1="3.8" y1="16.2" x2="5.2" y2="14.8"/><line x1="10.8" y1="9.2" x2="12.2" y2="7.8"/>
+            <rect x="17" y="6" width="6" height="12" rx="1"/><line x1="18.5" y1="4" x2="21.5" y2="4"/>
+            <line x1="18.5" y1="10" x2="21.5" y2="10" opacity="0.5"/><line x1="18.5" y1="13" x2="21.5" y2="13" opacity="0.5"/>
+            <line x1="32" y1="14" x2="32" y2="22"/><line x1="30" y1="22" x2="34" y2="22"/>
+            <circle cx="32" cy="12" r="1.3" fill="currentColor"/>
+            <path d="M32 12 L36 9"/><path d="M32 12 L28 10"/><path d="M32 12 L33 7"/>
+            <line x1="2" y1="32" x2="38" y2="32" opacity="0.4"/>
+          </svg>
+        </span>
+        <div class="cred-content">
+          <div class="cred-value small">PV · ESS · Eólica</div>
+          <div class="cred-label">cobertura sectorial</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <span>© 2026 Iberian Nexus Investment SL · Madrid · Shanghái</span>
+      <span>EN · 中文 · ES</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 30) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 50);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
