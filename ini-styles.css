@@ -533,20 +533,6 @@ h2.h-display .gold {
   border-radius: 2px;
   position: relative;
 }
-.definition::before {
-  content: "认知前提";
-  position: absolute;
-  top: -10px; left: 2rem;
-  background: var(--bg-deep);
-  padding: 0 0.8rem;
-  font-family: var(--f-mono);
-  font-size: 0.65rem;
-  color: var(--gold);
-  letter-spacing: 0.18em;
-}
-.track-section.alt .definition::before {
-  background: var(--bg-mid);
-}
 .definition-label {
   font-family: var(--f-mono);
   font-size: 0.7rem;
@@ -1311,8 +1297,30 @@ h2.h-display .gold {
   background: var(--bg-card);
   border: 1px solid var(--divider);
   border-radius: 3px;
-  padding: 1.8rem 1.4rem;
-  text-align: center;
+  padding: 2.2rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  min-height: 200px;
+  justify-content: space-between;
+}
+.cred-icon {
+  color: var(--gold);
+  margin-bottom: 1.2rem;
+  display: block;
+}
+.cred-icon svg {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+.cred-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  justify-content: flex-start;
 }
 .cred-value {
   font-family: var(--f-serif);
