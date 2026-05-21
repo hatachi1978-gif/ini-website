@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Track 01 · China-to-Europe Market Entry | INI Investment</title>
+<meta name="description" content="We are not a consultancy delivering reports — we are your local team in Europe, building your local subsystem and activating your local channels.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../ini-styles.css">
+<style>
+  :root {
+    --en-space-3xs: 4px;
+    --en-space-2xs: 8px;
+    --en-space-xs: 16px;
+    --en-space-sm: 24px;
+    --en-space-md: 40px;
+    --en-space-lg: 64px;
+    --en-space-xl: 96px;
+    --en-space-2xl: 128px;
+    --en-gold: #C8A04C;
+    --en-gold-hover: #E0B860;
+    --en-gold-soft: rgba(200, 160, 76, 0.2);
+    --en-gold-faint: rgba(200, 160, 76, 0.12);
+    --en-gold-dim: rgba(200, 160, 76, 0.55);
+    --en-cream: #F0EBDC;
+    --en-cream-dim: rgba(240, 235, 220, 0.7);
+  }
+
+  body, p, .lede, .stage p, .mode p, .fit-list li,
+  .deliv-item, .audience-list, .office-name, .office-addr,
+  .contact-lede, .step-title, .step-sub, .def-explanation,
+  .formula-text, .cross-link-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-weight: 400;
+  }
+  body { font-size: 16px; line-height: 1.7; }
+  p { font-size: 17px; line-height: 1.7; }
+  .lede { font-size: 20px !important; line-height: 1.6 !important; font-weight: 400 !important; }
+
+  h1, h2, h3, h4, h5, .h-display, .logo-text .main {
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif !important;
+    font-weight: 500 !important;
+  }
+  h1 { font-size: clamp(48px, 5.5vw, 76px) !important; line-height: 1.08 !important; letter-spacing: -0.015em !important; }
+  .h-display, h2 { font-size: clamp(36px, 4vw, 52px) !important; line-height: 1.15 !important; letter-spacing: -0.01em !important; }
+  h3 { font-size: 28px !important; line-height: 1.25 !important; }
+  h4 { font-size: 22px !important; line-height: 1.3 !important; }
+  h5 { font-size: 18px !important; line-height: 1.4 !important; }
+
+  .section-label, .detail-line, .track-section-label,
+  .track-tag, .stage-tag, .fit-tag, .mode-num,
+  .definition-label, .formula-tag, .step-num,
+  .audience-flag, .office-flag, .email-label,
+  .cross-link-meta, .nav-lang, .logo-text .sub {
+    font-family: 'JetBrains Mono', monospace !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.14em !important;
+  }
+  .section-label, .detail-line, .track-section-label,
+  .track-tag, .stage-tag, .fit-tag, .definition-label,
+  .formula-tag, .audience-flag, .office-flag,
+  .email-label, .cross-link-meta {
+    font-size: 11px !important;
+    font-weight: 500 !important;
+  }
+  .nav-lang { font-size: 12px !important; letter-spacing: 0.1em !important; }
+
+  /* NAV */
+  .nav-links {
+    display: flex !important; flex-direction: row !important;
+    align-items: center !important; list-style: none !important;
+    padding: 0 !important; margin: 0 !important;
+  }
+  .nav-links li {
+    margin: 0 !important; padding: 0 32px 0 0 !important;
+    list-style: none !important; display: inline-flex !important;
+    align-items: center !important;
+  }
+  .nav-links li:last-child { padding-right: 0 !important; }
+  .nav-links a {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 13px !important; font-weight: 500 !important;
+    letter-spacing: 0.14em !important; text-transform: uppercase !important;
+    padding: 0 !important; white-space: nowrap !important;
+  }
+  .nav-links a::before, .nav-links li a::before,
+  nav .nav-links a::before, #nav .nav-links a::before,
+  .nav-links a[data-num]::before, .nav-links li a[data-num]::before {
+    display: none !important; content: none !important;
+  }
+
+  /* SECTION RHYTHM */
+  .detail-hero { padding-top: var(--en-space-2xl) !important; padding-bottom: var(--en-space-xl) !important; }
+  .track-section { padding-top: var(--en-space-xl) !important; padding-bottom: var(--en-space-xl) !important; }
+  .cross-link, .contact { padding-top: var(--en-space-xl) !important; padding-bottom: var(--en-space-xl) !important; }
+
+  .section-head { margin-bottom: var(--en-space-lg) !important; }
+  .section-head.center { text-align: center; }
+  .section-head.center .lede { margin-left: auto; margin-right: auto; }
+  .section-label, .track-section-label, .detail-line {
+    margin-bottom: var(--en-space-sm) !important;
+  }
+  .lede { max-width: 720px; }
+
+  /* HERO */
+  .detail-hero-inner { max-width: 880px; }
+  .detail-hero-inner .detail-line { margin-bottom: var(--en-space-md) !important; }
+  .detail-hero-inner h1 { margin-bottom: var(--en-space-md) !important; }
+  .detail-hero-inner p {
+    margin-top: var(--en-space-md) !important;
+    font-size: 19px !important;
+    color: var(--en-cream-dim) !important;
+  }
+  .mini-divider {
+    width: 60px; height: 1px;
+    background: var(--en-gold); opacity: 0.5;
+    margin: var(--en-space-md) 0;
+  }
+
+  /* DEFINITION */
+  .definition { max-width: 880px; margin: 0 auto; }
+  .definition-label {
+    color: var(--en-gold) !important;
+    margin-bottom: var(--en-space-sm) !important;
+    display: block !important;
+  }
+  .definition h3 { margin-bottom: var(--en-space-md) !important; }
+  .def-explanation {
+    margin-bottom: var(--en-space-lg) !important;
+    color: var(--en-cream-dim) !important;
+  }
+  .def-explanation strong { color: var(--en-cream); font-weight: 500; }
+
+  /* FORMULA */
+  .formula {
+    display: flex !important; align-items: stretch !important;
+    justify-content: center !important; gap: var(--en-space-2xs) !important;
+    flex-wrap: wrap !important;
+  }
+  .formula-block {
+    flex: 1 1 200px !important;
+    padding: var(--en-space-md) var(--en-space-sm) !important;
+    border: 0.5px solid var(--en-gold-soft) !important;
+    background: rgba(240, 235, 220, 0.02) !important;
+    text-align: center !important;
+    min-width: 180px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .formula-block.result {
+    border-color: var(--en-gold) !important;
+    background: rgba(200, 160, 76, 0.06) !important;
+  }
+  .formula-icon {
+    color: var(--en-gold) !important;
+    margin-bottom: var(--en-space-sm) !important;
+    display: block !important;
+  }
+  .formula-icon svg {
+    width: 24px !important;
+    height: 24px !important;
+    display: block !important;
+  }
+  .formula-tag {
+    color: var(--en-gold) !important;
+    display: block !important;
+    margin-bottom: var(--en-space-sm) !important;
+  }
+  .formula-text { font-size: 15px !important; line-height: 1.5 !important; color: var(--en-cream) !important; }
+  .formula-op {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 28px !important; color: var(--en-gold) !important;
+    display: flex !important; align-items: center !important;
+    padding: 0 var(--en-space-2xs) !important;
+  }
+
+  /* STAGES */
+  .stage-grid {
+    display: grid !important; grid-template-columns: 1fr 1fr !important;
+    gap: var(--en-space-md) !important;
+    max-width: 1080px !important; margin: 0 auto !important;
+  }
+  .stage {
+    padding: var(--en-space-lg) !important;
+    border: 0.5px solid var(--en-gold-soft) !important;
+    background: rgba(240, 235, 220, 0.02) !important;
+  }
+  .stage-tag {
+    color: var(--en-gold) !important;
+    margin-bottom: var(--en-space-md) !important;
+    display: inline-block !important;
+  }
+  .stage h4 { margin-bottom: var(--en-space-sm) !important; color: var(--en-cream) !important; }
+  .stage p { font-size: 16px !important; color: var(--en-cream-dim) !important; }
+
+  /* FIT */
+  .fit-grid {
+    display: grid !important; grid-template-columns: 1fr 1fr !important;
+    gap: var(--en-space-md) !important;
+    max-width: 1080px !important; margin: 0 auto !important;
+  }
+  .fit-card {
+    padding: var(--en-space-lg) !important;
+    border: 0.5px solid var(--en-gold-soft) !important;
+    background: rgba(240, 235, 220, 0.02) !important;
+  }
+  .fit-card.unfit { border-color: rgba(240, 235, 220, 0.1) !important; }
+  .fit-tag {
+    color: var(--en-gold) !important;
+    margin-bottom: var(--en-space-md) !important;
+    display: inline-block !important;
+  }
+  .fit-tag.unfit-tag { color: var(--en-cream-dim) !important; }
+  .fit-card h4 { margin-bottom: var(--en-space-md) !important; color: var(--en-cream) !important; }
+  .fit-list { list-style: none !important; padding: 0 !important; margin: 0 !important; }
+  .fit-list li {
+    padding: 8px 0 8px 24px !important;
+    position: relative !important;
+    font-size: 15px !important; line-height: 1.6 !important;
+    color: var(--en-cream-dim) !important;
+  }
+  .fit-list.yes li::before {
+    content: "+" !important; position: absolute !important;
+    left: 4px !important; color: var(--en-gold) !important;
+    font-weight: 500 !important;
+  }
+  .fit-list.no li::before {
+    content: "−" !important; position: absolute !important;
+    left: 4px !important; color: rgba(240, 235, 220, 0.4) !important;
+    font-weight: 500 !important;
+  }
+
+  /* MODES */
+  .modes-grid {
+    display: grid !important; grid-template-columns: repeat(4, 1fr) !important;
+    gap: var(--en-space-md) !important;
+    max-width: 1080px !important; margin: 0 auto !important;
+  }
+  .mode {
+    padding: var(--en-space-lg) var(--en-space-sm) !important;
+    border: 0.5px solid var(--en-gold-soft) !important;
+    background: rgba(240, 235, 220, 0.02) !important;
+    text-align: center !important;
+  }
+  .mode-num {
+    color: var(--en-gold) !important;
+    font-size: 11px !important;
+    margin-bottom: var(--en-space-md) !important;
+    display: block !important;
+  }
+  .mode h5 { margin-bottom: var(--en-space-sm) !important; color: var(--en-cream) !important; }
+  .mode p { font-size: 14px !important; color: var(--en-cream-dim) !important; }
+
+  /* AUDIENCE */
+  .audience {
+    display: grid !important; grid-template-columns: 1fr 1fr !important;
+    gap: var(--en-space-md) !important;
+    max-width: 1080px !important; margin: 0 auto !important;
+  }
+  .audience-card {
+    padding: var(--en-space-lg) !important;
+    border: 0.5px solid var(--en-gold-soft) !important;
+    background: rgba(240, 235, 220, 0.02) !important;
+  }
+  .audience-flag {
+    color: var(--en-gold) !important;
+    margin-bottom: var(--en-space-md) !important;
+    display: block !important;
+  }
+  .audience-list {
+    font-size: 17px !important; line-height: 1.7 !important;
+    color: var(--en-cream) !important;
+  }
+
+  /* PROCESS 5 STEPS */
+  .process-wrap { max-width: 1080px; margin: 0 auto; }
+  .process {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: var(--en-space-2xs) !important;
+  }
+  .step {
+    padding: var(--en-space-md) var(--en-space-2xs) !important;
+    border: 0.5px solid var(--en-gold-soft) !important;
+    background: rgba(240, 235, 220, 0.02) !important;
+    text-align: center !important;
+  }
+  .step-icon {
+    margin-bottom: var(--en-space-sm) !important;
+    display: flex !important; justify-content: center !important;
+  }
+  .step-icon svg { width: 28px !important; height: 28px !important; }
+  .step-num {
+    display: block !important; color: var(--en-gold) !important;
+    margin-bottom: var(--en-space-2xs) !important;
+  }
+  .step-title { font-size: 15px !important; color: var(--en-cream) !important; font-weight: 500 !important; }
+  .step-sub { font-size: 12px !important; color: var(--en-cream-dim) !important; margin-top: 4px !important; }
+
+  /* DELIVERABLES */
+  .deliverables { max-width: 1080px; margin: 0 auto; }
+  .deliv-list {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+    gap: var(--en-space-sm) !important;
+  }
+  .deliv-item {
+    padding: var(--en-space-md) var(--en-space-sm) !important;
+    border: 0.5px solid var(--en-gold-soft) !important;
+    background: rgba(240, 235, 220, 0.02) !important;
+    font-size: 15px !important;
+    color: var(--en-cream) !important;
+  }
+  .deliv-item.featured {
+    border-color: var(--en-gold) !important;
+    background: rgba(200, 160, 76, 0.06) !important;
+    grid-column: span 2 !important;
+  }
+  .deliv-item .star {
+    color: var(--en-gold) !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 11px !important;
+    letter-spacing: 0.14em !important;
+    text-transform: uppercase !important;
+  }
+  .deliv-item .featured-text {
+    display: inline-block !important;
+    margin-top: var(--en-space-2xs) !important;
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 22px !important;
+    font-weight: 500 !important;
+    color: var(--en-cream) !important;
+  }
+
+  /* CROSS LINK */
+  .cross-link-row {
+    display: grid !important; grid-template-columns: 1fr 1fr !important;
+    gap: var(--en-space-md) !important;
+    max-width: 1080px !important; margin: 0 auto !important;
+  }
+  .cross-link-item {
+    padding: var(--en-space-lg) !important;
+    border: 0.5px solid var(--en-gold-soft) !important;
+    background: rgba(240, 235, 220, 0.02) !important;
+    text-decoration: none !important;
+    display: flex !important; justify-content: space-between !important;
+    align-items: center !important; gap: var(--en-space-md) !important;
+    transition: border-color 0.2s !important;
+  }
+  .cross-link-item:hover { border-color: var(--en-gold) !important; }
+  .cross-link-meta {
+    color: var(--en-gold) !important;
+    margin-bottom: var(--en-space-2xs) !important;
+    display: block !important;
+  }
+  .cross-link-title {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 20px !important; font-weight: 500 !important;
+    color: var(--en-cream) !important;
+  }
+  .cross-link-arrow-small {
+    color: var(--en-gold) !important;
+    font-size: 22px !important;
+  }
+
+  /* CONTACT */
+  .contact-inner { max-width: 1080px; margin: 0 auto; text-align: center; }
+  .contact .section-label { display: block !important; margin-bottom: var(--en-space-sm) !important; }
+  .contact h2 { margin-bottom: var(--en-space-md) !important; }
+  .contact-lede {
+    margin-bottom: var(--en-space-xl) !important;
+    margin-left: auto !important; margin-right: auto !important;
+    color: var(--en-cream-dim) !important;
+  }
+  .office-grid {
+    display: grid !important; grid-template-columns: 1fr 1fr !important;
+    gap: var(--en-space-md) !important;
+    max-width: 880px !important;
+    margin: 0 auto var(--en-space-xl) !important;
+    text-align: left !important;
+  }
+  .office {
+    padding: var(--en-space-lg) !important;
+    border: 0.5px solid var(--en-gold-soft) !important;
+    background: rgba(240, 235, 220, 0.02) !important;
+  }
+  .office-flag {
+    color: var(--en-gold) !important;
+    margin-bottom: var(--en-space-sm) !important;
+    display: block !important;
+  }
+  .office-name {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 22px !important; font-weight: 500 !important;
+    color: var(--en-cream) !important;
+    margin-bottom: var(--en-space-sm) !important;
+  }
+  .office-addr {
+    font-size: 15px !important; line-height: 1.7 !important;
+    color: var(--en-cream-dim) !important;
+  }
+  .email-block {
+    max-width: 880px !important; margin: 0 auto !important;
+    padding: var(--en-space-lg) var(--en-space-md) !important;
+    border-top: 0.5px solid var(--en-gold-soft) !important;
+    border-bottom: 0.5px solid var(--en-gold-soft) !important;
+    text-align: center !important;
+  }
+  .email-label {
+    color: var(--en-gold) !important;
+    margin-bottom: var(--en-space-md) !important;
+    display: block !important;
+  }
+  .email-addr {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-style: italic !important;
+    font-size: clamp(24px, 3vw, 36px) !important;
+    color: var(--en-gold) !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+    transition: color 0.2s !important;
+  }
+  .email-addr:hover { color: var(--en-gold-hover) !important; }
+
+  a:link, a:visited { color: inherit; }
+
+  footer { padding-top: var(--en-space-lg) !important; padding-bottom: var(--en-space-lg) !important; }
+  .footer-inner {
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 11px !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    opacity: 0.6;
+  }
+
+  @media (max-width: 900px) {
+    .stage-grid, .fit-grid, .audience, .office-grid, .cross-link-row { grid-template-columns: 1fr !important; }
+    .modes-grid { grid-template-columns: 1fr 1fr !important; }
+    .process { grid-template-columns: repeat(5, minmax(120px, 1fr)) !important; overflow-x: auto !important; }
+    .formula { flex-direction: column !important; }
+    .formula-op { justify-content: center !important; padding: var(--en-space-2xs) !important; }
+    .deliv-item.featured { grid-column: span 1 !important; }
+  }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">IN</div>
+      <div class="logo-text">
+        <span class="main">INI</span>
+        <span class="sub">IBERIAN NEXUS INVESTMENT</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="solutions.html">Solutions</a></li>
+      <li><a href="track-01.html" class="current">China Outbound</a></li>
+      <li><a href="track-02.html">Asset Investment</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-lang">
+      <a href="../track-01.html" class="inactive">中文</a>
+      <span class="active">EN</span>
+      <a href="../es/track-01.html" class="inactive">ES</a>
+    </div>
+  </div>
+</nav>
+
+<!-- DETAIL HERO -->
+<section class="detail-hero">
+  <div class="container">
+    <div class="detail-hero-inner fade-in">
+      <div class="detail-line">Track 01 · China Outbound</div>
+      <h1>China-to-Europe <span class="gold">Market Entry</span></h1>
+      <div class="mini-divider"></div>
+      <p>We are not a consultancy delivering reports — we are your local team in Europe, helping you build your local subsystem, activating your local channels, and sharing accountability for the outcome.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DEFINITION -->
+<section class="track-section alt">
+  <div class="container">
+    <div class="track-section-label">Conceptual Premise</div>
+    <div class="definition fade-in">
+      <div class="definition-label">What "Going Global" Really Means</div>
+      <h3>Building <span class="gold">Domestic Sales</span> Capability in the Destination Market</h3>
+      <p class="def-explanation">
+        Generating sustainable orders by entering local sales channel networks. <strong>This is fundamentally different from traditional export trading at the structural level.</strong>
+      </p>
+      <div class="formula">
+        <div class="formula-block">
+          <span class="formula-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="8" width="16" height="13"/>
+              <path d="M4 8 L12 3 L20 8"/>
+              <rect x="7.5" y="12" width="2.5" height="2.5" fill="currentColor" opacity="0.7"/>
+              <rect x="14" y="12" width="2.5" height="2.5" fill="currentColor" opacity="0.7"/>
+              <rect x="10.5" y="16.5" width="3" height="4.5" fill="none"/>
+            </svg>
+          </span>
+          <div class="formula-tag">A</div>
+          <div class="formula-text">Local Entity Subsystem</div>
+        </div>
+        <div class="formula-op">+</div>
+        <div class="formula-block">
+          <span class="formula-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="2.4" fill="currentColor"/>
+              <circle cx="5" cy="5" r="1.8"/>
+              <circle cx="19" cy="5" r="1.8"/>
+              <circle cx="5" cy="19" r="1.8"/>
+              <circle cx="19" cy="19" r="1.8"/>
+              <line x1="6.4" y1="6.4" x2="10.3" y2="10.3"/>
+              <line x1="17.6" y1="6.4" x2="13.7" y2="10.3"/>
+              <line x1="6.4" y1="17.6" x2="10.3" y2="13.7"/>
+              <line x1="17.6" y1="17.6" x2="13.7" y2="13.7"/>
+            </svg>
+          </span>
+          <div class="formula-tag">B</div>
+          <div class="formula-text">Channel Strategy &amp; Access</div>
+        </div>
+        <div class="formula-op">=</div>
+        <div class="formula-block result">
+          <span class="formula-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/>
+              <circle cx="12" cy="12" r="6.5" opacity="0.4"/>
+              <path d="M8.5 12.5 L11 15 L15.5 9.5" stroke-width="1.6"/>
+            </svg>
+          </span>
+          <div class="formula-tag">Result</div>
+          <div class="formula-text">A real European<br>go-to-market system</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAGES -->
+<section class="track-section">
+  <div class="container">
+    <div class="track-section-label">Where You Are Now</div>
+    <div class="stages fade-in">
+      <div class="stage-grid">
+        <div class="stage">
+          <span class="stage-tag">0 to 1</span>
+          <h4>No Local Subsystem Yet</h4>
+          <p>No local entity, no local employees, no local channels in Europe. INI helps you assess target markets, design the initial subsystem architecture, and identify the most critical channel nodes for the first phase.</p>
+        </div>
+        <div class="stage">
+          <span class="stage-tag">1 to 10</span>
+          <h4>Scaling Through Channel Expansion</h4>
+          <p>Entity and core staff are in place but growth has stalled. Based on the real-world state of local sales channels, INI enters from the best-fit channel nodes and restructures your existing local sales subsystem.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FIT -->
+<section class="track-section alt">
+  <div class="container">
+    <div class="track-section-label">Fit and Not-Fit</div>
+    <div class="fit-grid fade-in">
+      <div class="fit-card">
+        <div class="fit-tag">+ Right-Fit Clients</div>
+        <h4>Where We Can Help</h4>
+        <ul class="fit-list yes">
+          <li>ESS / PCS / battery companies</li>
+          <li>Solar PV modules / inverters / mounting structure companies</li>
+          <li>Wind energy equipment companies</li>
+          <li>Local-government renewable energy outbound platforms</li>
+          <li>Companies already in Europe but stalling in growth</li>
+        </ul>
+      </div>
+      <div class="fit-card unfit">
+        <div class="fit-tag unfit-tag">− Where We Are Not the Right Fit</div>
+        <h4>We Suggest You Find a Different Partner</h4>
+        <ul class="fit-list no">
+          <li>Looking only to purchase a client list</li>
+          <li>Unwilling to invest in local service and sales capability</li>
+          <li>Expecting short-term orders only, with no intent for long-term operations</li>
+          <li>Product certification, delivery, or after-sales capabilities are seriously lacking and not open to change</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODES -->
+<section class="track-section">
+  <div class="container">
+    <div class="track-section-label">Engagement Modes</div>
+    <div class="section-head center fade-in" style="margin-bottom: 2.5rem;">
+      <h2 class="h-display" style="font-size: clamp(1.5rem, 2.4vw, 2rem);">Four Engagement Modes</h2>
+    </div>
+    <div class="modes-grid fade-in">
+      <div class="mode">
+        <div class="mode-num">MODE 01</div>
+        <h5>Phased Diagnostic</h5>
+        <p>Short-term mandate<br>Market assessment &amp; pathway design</p>
+      </div>
+      <div class="mode">
+        <div class="mode-num">MODE 02</div>
+        <h5>Channel Development</h5>
+        <p>Dedicated delivery<br>Channel access &amp; activation</p>
+      </div>
+      <div class="mode">
+        <div class="mode-num">MODE 03</div>
+        <h5>Subsystem Build</h5>
+        <p>Full-system delivery<br>Entity + Team + Office</p>
+      </div>
+      <div class="mode">
+        <div class="mode-num">MODE 04</div>
+        <h5>Long-Term European Partner</h5>
+        <p>Ongoing engagement<br>Market advisory &amp; operational coordination</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIENCE -->
+<section class="track-section alt">
+  <div class="container">
+    <div class="track-section-label">Who We Serve</div>
+    <div class="audience fade-in">
+      <div class="audience-card">
+        <div class="audience-flag">China Side</div>
+        <div class="audience-list">Renewable energy manufacturers · Local-government outbound platforms · Chinese companies already in Europe</div>
+      </div>
+      <div class="audience-card">
+        <div class="audience-flag">Europe Side</div>
+        <div class="audience-list">Regional distributors &amp; wholesalers · System integrators · Local EPC contractors · Asset developers</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS 5 STEPS -->
+<section class="track-section">
+  <div class="container">
+    <div class="track-section-label">Service Process · 5 Steps</div>
+    <div class="process-wrap fade-in">
+      <div class="process process-5">
+        <div class="step">
+          <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8A04C" stroke-width="1.5"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></div>
+          <span class="step-num">01</span>
+          <div class="step-title">Market Diagnostic</div>
+          <div class="step-sub">Path planning</div>
+        </div>
+        <div class="step">
+          <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8A04C" stroke-width="1.5"><circle cx="12" cy="12" r="2"/><circle cx="5" cy="6" r="1.5"/><circle cx="19" cy="6" r="1.5"/><circle cx="5" cy="18" r="1.5"/><circle cx="19" cy="18" r="1.5"/><line x1="6.5" y1="7" x2="11" y2="11"/><line x1="17.5" y1="7" x2="13" y2="11"/><line x1="6.5" y1="17" x2="11" y2="13"/><line x1="17.5" y1="17" x2="13" y2="13"/></svg></div>
+          <span class="step-num">02</span>
+          <div class="step-title">Channel Activation</div>
+          <div class="step-sub">Local sales network</div>
+        </div>
+        <div class="step">
+          <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8A04C" stroke-width="1.5"><rect x="5" y="5" width="14" height="14" rx="1"/><path d="M9 9h6M9 13h6M9 17h3"/></svg></div>
+          <span class="step-num">03</span>
+          <div class="step-title">Entity Setup</div>
+          <div class="step-sub">Subsystem registration &amp; compliance</div>
+        </div>
+        <div class="step">
+          <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8A04C" stroke-width="1.5"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5"/><circle cx="17" cy="9" r="2.5"/><path d="M15 20c0-2 2-3.5 4-3.5"/></svg></div>
+          <span class="step-num">04</span>
+          <div class="step-title">Team Building</div>
+          <div class="step-sub">On-the-ground team</div>
+        </div>
+        <div class="step">
+          <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8A04C" stroke-width="1.5"><path d="M3 21V9l6-4 6 4v12"/><path d="M15 13l6-2v10"/><path d="M3 21h18"/></svg></div>
+          <span class="step-num">05</span>
+          <div class="step-title">Manufacturing Setup</div>
+          <div class="step-sub">Site selection &amp; government relations</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERABLES -->
+<section class="track-section alt">
+  <div class="container">
+    <div class="track-section-label">Core Deliverables</div>
+    <div class="deliverables fade-in">
+      <div class="deliv-list">
+        <div class="deliv-item featured">
+          <span class="star">★ Core Deliverable</span><br>
+          <span class="featured-text">An activated local sales channel network</span>
+        </div>
+        <div class="deliv-item">Local entity subsystem (entity + team + office)</div>
+        <div class="deliv-item">Channel strategy and execution cadence</div>
+        <div class="deliv-item">Market entry structure recommendations</div>
+        <div class="deliv-item">Localized product positioning and pricing</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CROSS LINK -->
+<section class="cross-link">
+  <div class="container">
+    <div class="cross-link-row fade-in">
+      <a href="solutions.html" class="cross-link-item">
+        <div>
+          <div class="cross-link-meta">Navigation</div>
+          <div class="cross-link-title">Back to Solutions Overview</div>
+        </div>
+        <span class="cross-link-arrow-small">←</span>
+      </a>
+      <a href="track-02.html" class="cross-link-item">
+        <div>
+          <div class="cross-link-meta">INI's Other Independent Track</div>
+          <div class="cross-link-title">Track 02 · Cross-Border Asset Transactions</div>
+        </div>
+        <span class="cross-link-arrow-small">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="section-label fade-in">Contact</div>
+      <h2 class="h-display fade-in">Start a <span class="gold">Conversation.</span></h2>
+      <p class="lede contact-lede fade-in">
+        If you are facing a concrete European market entry challenge, we prefer to first understand your situation before assessing whether collaboration makes sense.
+      </p>
+      <div class="office-grid fade-in">
+        <div class="office">
+          <div class="office-flag">Madrid · Spain</div>
+          <div class="office-name">European Headquarters</div>
+          <div class="office-addr">Paseo de la Castellana, 121 – 7ºB<br>28046 Madrid, Spain</div>
+        </div>
+        <div class="office">
+          <div class="office-flag">Shanghai · China</div>
+          <div class="office-name">China Office</div>
+          <div class="office-addr">Honqiao Green Valley Plaza Building G, 4F<br>69 Yonghong Road, Minhang District, Shanghai</div>
+        </div>
+      </div>
+      <div class="email-block fade-in">
+        <div class="email-label">Email</div>
+        <a href="mailto:contact@iberiannexus.com" class="email-addr">contact@iberiannexus.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <span>© 2026 Iberian Nexus Investment SL · Madrid · Shanghai</span>
+      <span>EN · 中文 · ES</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 30) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 50);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

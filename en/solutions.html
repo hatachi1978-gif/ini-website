@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solutions | INI Investment</title>
+<meta name="description" content="Two independent tracks. One cross-border execution discipline. China outbound market entry and cross-border asset transactions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../ini-styles.css">
+<style>
+  :root {
+    --en-space-3xs: 4px;
+    --en-space-2xs: 8px;
+    --en-space-xs: 16px;
+    --en-space-sm: 24px;
+    --en-space-md: 40px;
+    --en-space-lg: 64px;
+    --en-space-xl: 96px;
+    --en-space-2xl: 128px;
+    --en-gold: #C8A04C;
+    --en-gold-hover: #E0B860;
+    --en-gold-soft: rgba(200, 160, 76, 0.2);
+    --en-gold-faint: rgba(200, 160, 76, 0.12);
+    --en-gold-dim: rgba(200, 160, 76, 0.55);
+    --en-cream: #F0EBDC;
+    --en-cream-dim: rgba(240, 235, 220, 0.7);
+  }
+
+  /* BODY */
+  body, p, .lede, .track-card p, .boundary-list li,
+  .selector-q, .selector-trigger, .independence-note,
+  .commitment-formula-lede, .formula-text,
+  .milestone-actions li, .pillar p, .see-more-cta a {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-weight: 400;
+  }
+  body { font-size: 16px; line-height: 1.7; }
+  p { font-size: 17px; line-height: 1.7; }
+  .lede { font-size: 20px !important; line-height: 1.6 !important; font-weight: 400 !important; }
+
+  /* DISPLAY */
+  h1, h2, h3, h4, h5, .h-display, .logo-text .main {
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif !important;
+    font-weight: 500 !important;
+  }
+  h1 { font-size: clamp(48px, 5.5vw, 76px) !important; line-height: 1.08 !important; letter-spacing: -0.015em !important; }
+  .h-display, h2 { font-size: clamp(36px, 4vw, 52px) !important; line-height: 1.15 !important; letter-spacing: -0.01em !important; }
+  h3 { font-size: 28px !important; line-height: 1.25 !important; }
+  h4 { font-size: 22px !important; line-height: 1.3 !important; }
+  h5 { font-size: 18px !important; line-height: 1.4 !important; }
+
+  /* MONO */
+  .section-label, .detail-line, .track-section-label,
+  .boundary-label, .track-tag, .formula-tag,
+  .milestone-dot, .pillar-num, .selector-arrow,
+  .nav-lang, .logo-text .sub, .see-more-cta a {
+    font-family: 'JetBrains Mono', monospace !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.14em !important;
+  }
+  .section-label, .detail-line, .track-section-label,
+  .boundary-label, .track-tag, .formula-tag {
+    font-size: 11px !important;
+    font-weight: 500 !important;
+  }
+  .nav-lang { font-size: 12px !important; letter-spacing: 0.1em !important; }
+  .see-more-cta a { font-size: 12px !important; letter-spacing: 0.16em !important; }
+
+  /* NAV */
+  .nav-links {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .nav-links li {
+    margin: 0 !important;
+    padding: 0 32px 0 0 !important;
+    list-style: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+  }
+  .nav-links li:last-child { padding-right: 0 !important; }
+  .nav-links a {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.14em !important;
+    text-transform: uppercase !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+  }
+  .nav-links a::before, .nav-links li a::before,
+  nav .nav-links a::before, #nav .nav-links a::before,
+  .nav-links a[data-num]::before, .nav-links li a[data-num]::before {
+    display: none !important;
+    content: none !important;
+  }
+
+  /* SECTION RHYTHM */
+  .detail-hero {
+    padding-top: var(--en-space-2xl) !important;
+    padding-bottom: var(--en-space-xl) !important;
+  }
+  .track-section, .method-block {
+    padding-top: var(--en-space-xl) !important;
+    padding-bottom: var(--en-space-xl) !important;
+  }
+  .section-head { margin-bottom: var(--en-space-lg) !important; }
+  .section-head.center { text-align: center; }
+  .section-head.center .lede { margin-left: auto; margin-right: auto; }
+  .section-label, .track-section-label, .detail-line {
+    margin-bottom: var(--en-space-sm) !important;
+  }
+  .section-head h2 { margin-bottom: var(--en-space-sm) !important; }
+  .lede { max-width: 720px; }
+
+  /* HERO */
+  .detail-hero-inner { max-width: 880px; }
+  .detail-hero-inner .detail-line { margin-bottom: var(--en-space-md) !important; }
+  .detail-hero-inner h1 { margin-bottom: var(--en-space-md) !important; }
+  .detail-hero-inner p {
+    margin-top: var(--en-space-md) !important;
+    font-size: 19px !important;
+    color: var(--en-cream-dim) !important;
+  }
+  .mini-divider {
+    width: 60px;
+    height: 1px;
+    background: var(--en-gold);
+    opacity: 0.5;
+    margin: var(--en-space-md) 0;
+  }
+
+  /* TRACK CARDS */
+  .track-card { padding: var(--en-space-lg) !important; }
+  .track-card .track-tag { margin-bottom: var(--en-space-md) !important; display: inline-block !important; }
+  .track-card h3 { margin-bottom: var(--en-space-sm) !important; }
+  .track-card p { margin-bottom: var(--en-space-md) !important; font-size: 16px !important; }
+
+  /* SEE MORE */
+  .see-more-cta { margin-top: var(--en-space-md) !important; }
+  .see-more-cta a,
+  .see-more-cta a:link,
+  .see-more-cta a:visited {
+    color: var(--en-gold) !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid var(--en-gold-soft) !important;
+    padding-bottom: 2px !important;
+    transition: color 0.2s, border-color 0.2s !important;
+  }
+  .see-more-cta a:hover {
+    color: var(--en-gold-hover) !important;
+    border-bottom-color: var(--en-gold) !important;
+  }
+
+  /* INDEPENDENCE NOTE */
+  .independence-note {
+    margin: var(--en-space-lg) auto !important;
+    padding: var(--en-space-md) !important;
+    border-left: 2px solid var(--en-gold) !important;
+    background: transparent !important;
+    max-width: 880px !important;
+    font-size: 17px !important;
+    line-height: 1.7 !important;
+  }
+
+  /* BOUNDARY */
+  .boundary {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: var(--en-space-md) !important;
+    max-width: 1080px !important;
+    margin: 0 auto !important;
+  }
+  .boundary-card {
+    padding: var(--en-space-lg) !important;
+    border: 0.5px solid var(--en-gold-soft) !important;
+    background: rgba(240, 235, 220, 0.02) !important;
+  }
+  .boundary-label {
+    color: var(--en-gold) !important;
+    margin-bottom: var(--en-space-sm) !important;
+    display: block !important;
+  }
+  .boundary-card h4 {
+    margin-bottom: var(--en-space-md) !important;
+    color: var(--en-cream) !important;
+  }
+  .boundary-list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .boundary-list li {
+    padding: 8px 0 8px 20px !important;
+    position: relative !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    color: var(--en-cream-dim) !important;
+  }
+  .boundary-list li::before {
+    content: "·" !important;
+    position: absolute !important;
+    left: 4px !important;
+    color: var(--en-gold) !important;
+    font-size: 20px !important;
+    line-height: 1 !important;
+  }
+
+  /* SELECTOR */
+  .selector {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: var(--en-space-md) !important;
+    max-width: 1080px !important;
+    margin: 0 auto !important;
+  }
+  .selector-card {
+    padding: var(--en-space-lg) !important;
+    border: 0.5px solid var(--en-gold-soft) !important;
+    background: rgba(240, 235, 220, 0.02) !important;
+    text-decoration: none !important;
+    display: block !important;
+    transition: border-color 0.2s, background 0.2s !important;
+  }
+  .selector-card:hover {
+    border-color: var(--en-gold) !important;
+    background: rgba(240, 235, 220, 0.04) !important;
+  }
+  .selector-q {
+    font-size: 14px !important;
+    color: var(--en-cream-dim) !important;
+    margin-bottom: var(--en-space-2xs) !important;
+  }
+  .selector-trigger {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 22px !important;
+    font-weight: 500 !important;
+    line-height: 1.3 !important;
+    color: var(--en-cream) !important;
+    margin-bottom: var(--en-space-md) !important;
+  }
+  .selector-arrow {
+    color: var(--en-gold) !important;
+    font-size: 12px !important;
+    letter-spacing: 0.16em !important;
+    display: block !important;
+  }
+
+  /* COMMITMENT FORMULA */
+  .commitment-formula {
+    max-width: 1080px !important;
+    margin: var(--en-space-lg) auto !important;
+  }
+  .commitment-formula-lede {
+    text-align: center !important;
+    font-size: 16px !important;
+    color: var(--en-cream-dim) !important;
+    margin-bottom: var(--en-space-md) !important;
+  }
+  .formula {
+    display: flex !important;
+    align-items: stretch !important;
+    justify-content: center !important;
+    gap: var(--en-space-2xs) !important;
+    flex-wrap: wrap !important;
+  }
+  .formula-block {
+    flex: 1 1 160px !important;
+    padding: var(--en-space-md) var(--en-space-sm) !important;
+    border: 0.5px solid var(--en-gold-soft) !important;
+    background: rgba(240, 235, 220, 0.02) !important;
+    text-align: center !important;
+    min-width: 160px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .formula-block.result {
+    border-color: var(--en-gold) !important;
+    background: rgba(200, 160, 76, 0.06) !important;
+  }
+  .formula-icon {
+    color: var(--en-gold) !important;
+    margin-bottom: var(--en-space-sm) !important;
+    display: block !important;
+  }
+  .formula-icon svg {
+    width: 24px !important;
+    height: 24px !important;
+    display: block !important;
+  }
+  .formula-tag {
+    color: var(--en-gold) !important;
+    display: block !important;
+    margin-bottom: var(--en-space-sm) !important;
+  }
+  .formula-text {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    color: var(--en-cream) !important;
+  }
+  .formula-op {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 28px !important;
+    color: var(--en-gold) !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 0 var(--en-space-2xs) !important;
+  }
+
+  /* MILESTONES */
+  .milestones {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: var(--en-space-md) !important;
+    max-width: 1080px !important;
+    margin: var(--en-space-xl) auto !important;
+  }
+  .milestone {
+    padding: var(--en-space-lg) !important;
+    border: 0.5px solid var(--en-gold-soft) !important;
+    background: rgba(240, 235, 220, 0.02) !important;
+  }
+  .milestone-dot {
+    color: var(--en-gold) !important;
+    font-size: 12px !important;
+    margin-bottom: var(--en-space-sm) !important;
+    display: block !important;
+  }
+  .milestone-title {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 22px !important;
+    font-weight: 500 !important;
+    color: var(--en-cream) !important;
+    margin-bottom: var(--en-space-md) !important;
+  }
+  .milestone-actions {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .milestone-actions li {
+    padding: 6px 0 6px 16px !important;
+    position: relative !important;
+    font-size: 14px !important;
+    color: var(--en-cream-dim) !important;
+  }
+  .milestone-actions li::before {
+    content: "·" !important;
+    position: absolute !important;
+    left: 4px !important;
+    color: var(--en-gold) !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+  }
+
+  /* PILLARS */
+  .pillars {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: var(--en-space-md) !important;
+    max-width: 1080px !important;
+    margin: var(--en-space-xl) auto 0 !important;
+  }
+  .pillar {
+    padding: var(--en-space-lg) var(--en-space-md) !important;
+  }
+  .pillar-num {
+    color: var(--en-gold) !important;
+    font-size: 12px !important;
+    margin-bottom: var(--en-space-sm) !important;
+    display: block !important;
+  }
+  .pillar h4 {
+    margin-bottom: var(--en-space-sm) !important;
+    color: var(--en-cream) !important;
+  }
+  .pillar p {
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+    color: var(--en-cream-dim) !important;
+  }
+
+  a:link, a:visited { color: inherit; }
+
+  /* FOOTER */
+  footer {
+    padding-top: var(--en-space-lg) !important;
+    padding-bottom: var(--en-space-lg) !important;
+  }
+  .footer-inner {
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 11px !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    opacity: 0.6;
+  }
+
+  @media (max-width: 900px) {
+    .boundary, .selector, .milestones, .pillars { grid-template-columns: 1fr !important; }
+    .formula { flex-direction: column !important; align-items: stretch !important; }
+    .formula-op { justify-content: center !important; padding: var(--en-space-2xs) !important; }
+  }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">IN</div>
+      <div class="logo-text">
+        <span class="main">INI</span>
+        <span class="sub">IBERIAN NEXUS INVESTMENT</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="solutions.html" class="current">Solutions</a></li>
+      <li><a href="track-01.html">China Outbound</a></li>
+      <li><a href="track-02.html">Asset Investment</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-lang">
+      <a href="../solutions.html" class="inactive">中文</a>
+      <span class="active">EN</span>
+      <a href="../es/solutions.html" class="inactive">ES</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="detail-hero">
+  <div class="container">
+    <div class="detail-hero-inner fade-in">
+      <div class="detail-line">Solutions</div>
+      <h1>Two Independent Tracks.<br>One <span class="gold">Cross-Border Execution Discipline.</span></h1>
+      <div class="mini-divider"></div>
+      <p>INI Investment operates two independent business tracks. They serve different clients, solve different problems, and follow different delivery paths — but both rest on the same set of core capabilities and project management discipline.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TRACK 01 -->
+<section class="track-section alt">
+  <div class="container">
+    <div class="track-section-label">Track 01 · China Outbound</div>
+    <div class="stages fade-in" style="margin-bottom: 3rem;">
+      <div class="track-card" style="background: transparent; border: 0.5px solid var(--en-gold);">
+        <span class="track-tag">Track 01</span>
+        <h3>China-to-Europe Market Entry</h3>
+        <p>We help Chinese renewable energy companies build a real European go-to-market system — local entity subsystem plus channel strategy and access.</p>
+        <p style="margin-bottom: 0;">
+          <strong style="color: var(--en-gold); font-weight: 500;">Target clients:</strong> Chinese renewable energy manufacturers, local-government outbound platforms, and Chinese companies already in Europe but stalling in growth.
+        </p>
+      </div>
+    </div>
+    <div class="see-more-cta fade-in">
+      <a href="track-01.html">View the Full Track 01 Page →</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRACK 02 -->
+<section class="track-section">
+  <div class="container">
+    <div class="track-section-label">Track 02 · Asset Investment</div>
+    <div class="stages fade-in" style="margin-bottom: 3rem;">
+      <div class="track-card" style="background: rgba(240, 235, 220, 0.02); border: 0.5px solid var(--en-gold);">
+        <span class="track-tag">Track 02</span>
+        <h3>Cross-Border Asset Transactions</h3>
+        <p>End-to-end coordination from screening to funding. We match European renewable energy assets with Chinese capital, applying the due diligence rigor required by institutional investors.</p>
+        <p style="margin-bottom: 0;">
+          <strong style="color: var(--en-gold); font-weight: 500;">Target clients:</strong> Chinese SOE investors, private industrial capital, funds; European project developers, EPC contractors, system integrators, investment banks / FA.
+        </p>
+      </div>
+    </div>
+    <div class="see-more-cta fade-in">
+      <a href="track-02.html">View the Full Track 02 Page →</a>
+    </div>
+  </div>
+</section>
+
+<!-- BOUNDARY -->
+<section class="track-section alt">
+  <div class="container">
+    <div class="track-section-label">Boundaries Between the Two Tracks</div>
+    <div class="section-head center fade-in" style="margin-bottom: 2.5rem;">
+      <h2 class="h-display">Boundary <span class="gold">Definition</span></h2>
+      <p class="lede">This is not a "disclaimer" weakening our offering — it is the professional expression of how we hold ourselves accountable to clients.</p>
+    </div>
+
+    <div class="boundary fade-in">
+      <div class="boundary-card">
+        <div class="boundary-label">What Is Shared</div>
+        <h4>Common Foundational Capabilities</h4>
+        <ul class="boundary-list">
+          <li>China-Europe dual-side team and time-zone coordination</li>
+          <li>European renewables sector understanding and local network</li>
+          <li>Cross-cultural project management capability</li>
+          <li>Awareness of compliance documentation and decision gates</li>
+          <li>Transaction and execution discipline</li>
+        </ul>
+      </div>
+      <div class="boundary-card">
+        <div class="boundary-label">What Is Not Shared</div>
+        <h4>Independent Operating Systems</h4>
+        <ul class="boundary-list">
+          <li>Client types and decision-making chains</li>
+          <li>Business processes and deliverables</li>
+          <li>Contract structures and business models</li>
+          <li>Risk logic and control methodology</li>
+          <li>Team composition and execution rhythm</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="independence-note fade-in" style="margin-top: 3rem;">
+      The two tracks <strong>are not premised on cross-channeling or bundling each other</strong>. We do not upsell investment services to outbound clients, nor do we expect asset-side clients to consider manufacturing localization — unless the client initiates the conversation and the scenario genuinely fits.
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO CHOOSE -->
+<section class="track-section">
+  <div class="container">
+    <div class="track-section-label">How to Choose</div>
+    <div class="section-head center fade-in" style="margin-bottom: 2.5rem;">
+      <h2 class="h-display">Which Track <span class="gold">Applies</span> to You?</h2>
+    </div>
+
+    <div class="selector fade-in">
+      <a href="track-01.html" class="selector-card">
+        <div class="selector-q">If you are facing</div>
+        <div class="selector-trigger">Product, channel, team, localization, or long-term market operation issues</div>
+        <span class="selector-arrow">Track 01 · China Outbound →</span>
+      </a>
+      <a href="track-02.html" class="selector-card">
+        <div class="selector-q">If you are facing</div>
+        <div class="selector-trigger">Project, asset, investment, exit, M&amp;A, or cross-border transaction issues</div>
+        <span class="selector-arrow">Track 02 · Asset Investment →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERY DISCIPLINE -->
+<section class="method-block track-section alt">
+  <div class="container">
+    <div class="section-head center fade-in">
+      <div class="section-label">Delivery Discipline</div>
+      <h2 class="h-display">One <span class="gold">Cross-Border Execution Discipline</span></h2>
+      <p class="lede">
+        The two tracks deliver through different paths but share one project management discipline. We do not run open-ended consulting, nor open-ended matchmaking — every delivery commitment is broken down in an engineering manner.
+      </p>
+    </div>
+
+    <div class="commitment-formula fade-in">
+      <p class="commitment-formula-lede">Every delivery commitment is defined by three explicit elements:</p>
+      <div class="formula">
+        <div class="formula-block">
+          <span class="formula-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <circle cx="6" cy="12" r="2" fill="currentColor"/>
+              <circle cx="12" cy="12" r="2.4" fill="none"/>
+              <circle cx="18" cy="12" r="2" fill="none" opacity="0.5"/>
+            </svg>
+          </span>
+          <div class="formula-tag">A · Stage</div>
+          <div class="formula-text">Milestone<br>Clear phase definition</div>
+        </div>
+        <div class="formula-op">+</div>
+        <div class="formula-block">
+          <span class="formula-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 3 L15 3 L19 7 L19 21 L6 21 Z"/>
+              <path d="M15 3 L15 7 L19 7"/>
+              <path d="M9 13 L11 15 L15 11"/>
+            </svg>
+          </span>
+          <div class="formula-tag">B · Deliverable</div>
+          <div class="formula-text">Deliverable<br>Defined output</div>
+        </div>
+        <div class="formula-op">+</div>
+        <div class="formula-block">
+          <span class="formula-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="3.5"/>
+              <path d="M5 21 C5 16.5 8 14 12 14 C16 14 19 16.5 19 21"/>
+              <circle cx="12" cy="8" r="0.8" fill="currentColor"/>
+            </svg>
+          </span>
+          <div class="formula-tag">C · Owner</div>
+          <div class="formula-text">Owner<br>Designated responsibility</div>
+        </div>
+        <div class="formula-op">=</div>
+        <div class="formula-block result">
+          <span class="formula-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/>
+              <circle cx="12" cy="12" r="6.5" opacity="0.4"/>
+              <path d="M8.5 12.5 L11 15 L15.5 9.5" stroke-width="1.6"/>
+            </svg>
+          </span>
+          <div class="formula-tag">Result</div>
+          <div class="formula-text">Auditable<br>engineered delivery</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="milestones fade-in">
+      <div class="milestone">
+        <div class="milestone-dot">M1</div>
+        <div class="milestone-title">Scope Lock</div>
+        <ul class="milestone-actions">
+          <li>Objectives and boundary confirmation</li>
+          <li>Deliverable checklist</li>
+          <li>Responsibility matrix</li>
+        </ul>
+      </div>
+      <div class="milestone">
+        <div class="milestone-dot">M2</div>
+        <div class="milestone-title">Staged Execution</div>
+        <ul class="milestone-actions">
+          <li>Milestone review mechanism</li>
+          <li>Progress documentation</li>
+          <li>Risk flagging and mitigation</li>
+        </ul>
+      </div>
+      <div class="milestone">
+        <div class="milestone-dot">M3</div>
+        <div class="milestone-title">Closing &amp; Continuity</div>
+        <ul class="milestone-actions">
+          <li>Acceptance and archiving</li>
+          <li>Post-close coordination kickoff</li>
+          <li>Long-term support mechanism</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar fade-in">
+        <div class="pillar-num">01</div>
+        <h4><span class="accent" style="color: var(--en-gold);">Engineered Breakdown</span>, not Hand-Holding</h4>
+        <p>Cross-border complexity is decomposed into executable staged tasks, each with a defined output and exit criterion.</p>
+      </div>
+      <div class="pillar fade-in">
+        <div class="pillar-num">02</div>
+        <h4><span class="accent" style="color: var(--en-gold);">Compliant Delivery</span>, Auditable &amp; Archivable</h4>
+        <p>Documentation systems, decision gates, and approval trails — designed against the compliance requirements of Chinese SOE outbound investment.</p>
+      </div>
+      <div class="pillar fade-in">
+        <div class="pillar-num">03</div>
+        <h4><span class="accent" style="color: var(--en-gold);">Dual Depth</span>, Both Sides Present</h4>
+        <p>Chinese side brings industry understanding; European side delivers local execution. Not a one-sided agent — a both-sides-present collaboration.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <span>© 2026 Iberian Nexus Investment SL · Madrid · Shanghai</span>
+      <span>EN · 中文 · ES</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 30) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 50);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

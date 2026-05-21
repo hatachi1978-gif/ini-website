@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Track 02 · Cross-Border Asset Transactions | INI Investment</title>
+<meta name="description" content="End-to-end coordination from screening to funding. We match European renewable energy assets with Chinese capital, applying institutional-grade due diligence rigor.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../ini-styles.css">
+<style>
+  :root {
+    --en-space-3xs: 4px;
+    --en-space-2xs: 8px;
+    --en-space-xs: 16px;
+    --en-space-sm: 24px;
+    --en-space-md: 40px;
+    --en-space-lg: 64px;
+    --en-space-xl: 96px;
+    --en-space-2xl: 128px;
+    --en-gold: #C8A04C;
+    --en-gold-hover: #E0B860;
+    --en-gold-soft: rgba(200, 160, 76, 0.2);
+    --en-gold-faint: rgba(200, 160, 76, 0.12);
+    --en-gold-dim: rgba(200, 160, 76, 0.55);
+    --en-cream: #F0EBDC;
+    --en-cream-dim: rgba(240, 235, 220, 0.7);
+  }
+
+  body, p, .lede, .matrix-list li, .fit-list li,
+  .deliv-item, .audience-list, .office-name, .office-addr,
+  .contact-lede, .step-mini-title, .step-mini-sub,
+  .cross-link-title {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-weight: 400;
+  }
+  body { font-size: 16px; line-height: 1.7; }
+  p { font-size: 17px; line-height: 1.7; }
+  .lede { font-size: 20px !important; line-height: 1.6 !important; font-weight: 400 !important; }
+
+  h1, h2, h3, h4, h5, .h-display, .logo-text .main {
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif !important;
+    font-weight: 500 !important;
+  }
+  h1 { font-size: clamp(48px, 5.5vw, 76px) !important; line-height: 1.08 !important; letter-spacing: -0.015em !important; }
+  .h-display, h2 { font-size: clamp(36px, 4vw, 52px) !important; line-height: 1.15 !important; letter-spacing: -0.01em !important; }
+  h3 { font-size: 28px !important; line-height: 1.25 !important; }
+  h4 { font-size: 22px !important; line-height: 1.3 !important; }
+  h5 { font-size: 18px !important; line-height: 1.4 !important; }
+
+  .section-label, .detail-line, .track-section-label,
+  .matrix-col-head, .fit-tag, .audience-flag,
+  .office-flag, .email-label, .step-num,
+  .cross-link-meta, .nav-lang, .logo-text .sub {
+    font-family: 'JetBrains Mono', monospace !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.14em !important;
+  }
+  .section-label, .detail-line, .track-section-label,
+  .matrix-col-head, .fit-tag, .audience-flag,
+  .office-flag, .email-label, .cross-link-meta {
+    font-size: 11px !important;
+    font-weight: 500 !important;
+  }
+  .nav-lang { font-size: 12px !important; letter-spacing: 0.1em !important; }
+
+  /* NAV */
+  .nav-links {
+    display: flex !important; flex-direction: row !important;
+    align-items: center !important; list-style: none !important;
+    padding: 0 !important; margin: 0 !important;
+  }
+  .nav-links li {
+    margin: 0 !important; padding: 0 32px 0 0 !important;
+    list-style: none !important; display: inline-flex !important;
+    align-items: center !important;
+  }
+  .nav-links li:last-child { padding-right: 0 !important; }
+  .nav-links a {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 13px !important; font-weight: 500 !important;
+    letter-spacing: 0.14em !important; text-transform: uppercase !important;
+    padding: 0 !important; white-space: nowrap !important;
+  }
+  .nav-links a::before, .nav-links li a::before,
+  nav .nav-links a::before, #nav .nav-links a::before,
+  .nav-links a[data-num]::before, .nav-links li a[data-num]::before {
+    display: none !important; content: none !important;
+  }
+
+  /* SECTION RHYTHM */
+  .detail-hero { padding-top: var(--en-space-2xl) !important; padding-bottom: var(--en-space-xl) !important; }
+  .track-section { padding-top: var(--en-space-xl) !important; padding-bottom: var(--en-space-xl) !important; }
+  .cross-link, .contact { padding-top: var(--en-space-xl) !important; padding-bottom: var(--en-space-xl) !important; }
+
+  .section-head { margin-bottom: var(--en-space-lg) !important; }
+  .section-head.center { text-align: center; }
+  .section-head.center .lede { margin-left: auto; margin-right: auto; }
+  .section-label, .track-section-label, .detail-line {
+    margin-bottom: var(--en-space-sm) !important;
+  }
+  .lede { max-width: 720px; }
+
+  /* HERO */
+  .detail-hero-inner { max-width: 880px; }
+  .detail-hero-inner .detail-line { margin-bottom: var(--en-space-md) !important; }
+  .detail-hero-inner h1 { margin-bottom: var(--en-space-md) !important; }
+  .detail-hero-inner p {
+    margin-top: var(--en-space-md) !important;
+    font-size: 19px !important;
+    color: var(--en-cream-dim) !important;
+  }
+  .mini-divider {
+    width: 60px; height: 1px;
+    background: var(--en-gold); opacity: 0.5;
+    margin: var(--en-space-md) 0;
+  }
+
+  /* AUDIENCE */
+  .audience {
+    display: grid !important; grid-template-columns: 1fr 1fr !important;
+    gap: var(--en-space-md) !important;
+    max-width: 1080px !important; margin: 0 auto !important;
+  }
+  .audience-card {
+    padding: var(--en-space-lg) !important;
+    border: 0.5px solid var(--en-gold-soft) !important;
+    background: rgba(240, 235, 220, 0.02) !important;
+  }
+  .audience-flag {
+    color: var(--en-gold) !important;
+    margin-bottom: var(--en-space-md) !important;
+    display: block !important;
+  }
+  .audience-list {
+    font-size: 17px !important; line-height: 1.7 !important;
+    color: var(--en-cream) !important;
+  }
+
+  /* MATRIX */
+  .matrix {
+    display: grid !important; grid-template-columns: repeat(3, 1fr) !important;
+    gap: var(--en-space-md) !important;
+    max-width: 1080px !important; margin: 0 auto !important;
+  }
+  .matrix-col {
+    padding: var(--en-space-lg) !important;
+    border: 0.5px solid var(--en-gold-soft) !important;
+    background: rgba(240, 235, 220, 0.02) !important;
+  }
+  .matrix-col-head {
+    color: var(--en-gold) !important;
+    margin-bottom: var(--en-space-2xs) !important;
+    display: block !important;
+  }
+  .matrix-col h5 {
+    margin-bottom: var(--en-space-md) !important;
+    color: var(--en-cream) !important;
+  }
+  .matrix-list {
+    list-style: none !important; padding: 0 !important; margin: 0 !important;
+    display: flex !important; flex-wrap: wrap !important;
+    gap: var(--en-space-2xs) !important;
+  }
+  .matrix-list li {
+    padding: 6px 14px !important;
+    border: 0.5px solid var(--en-gold-soft) !important;
+    border-radius: 2px !important;
+    font-size: 13px !important;
+    color: var(--en-cream-dim) !important;
+    background: rgba(240, 235, 220, 0.02) !important;
+  }
+
+  /* PROCESS LONG (9 STEPS) */
+  .process-scroll { max-width: 1080px; margin: 0 auto; overflow-x: auto; }
+  .process-long {
+    display: grid !important;
+    grid-template-columns: repeat(9, minmax(110px, 1fr)) !important;
+    gap: var(--en-space-2xs) !important;
+    min-width: 980px !important;
+  }
+  .step-mini {
+    padding: var(--en-space-md) var(--en-space-2xs) !important;
+    border: 0.5px solid var(--en-gold-soft) !important;
+    background: rgba(240, 235, 220, 0.02) !important;
+    text-align: center !important;
+  }
+  .step-mini .step-num {
+    display: block !important; color: var(--en-gold) !important;
+    margin-bottom: var(--en-space-2xs) !important;
+  }
+  .step-mini-title {
+    font-size: 14px !important; font-weight: 500 !important;
+    color: var(--en-cream) !important;
+  }
+  .step-mini-sub { font-size: 12px !important; color: var(--en-cream-dim) !important; margin-top: 4px !important; }
+
+  /* DELIVERABLES */
+  .deliverables { max-width: 1080px; margin: 0 auto; }
+  .deliv-list {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+    gap: var(--en-space-sm) !important;
+  }
+  .deliv-item {
+    padding: var(--en-space-md) var(--en-space-sm) !important;
+    border: 0.5px solid var(--en-gold-soft) !important;
+    background: rgba(240, 235, 220, 0.02) !important;
+    font-size: 15px !important;
+    color: var(--en-cream) !important;
+  }
+
+  /* FIT */
+  .fit-grid {
+    display: grid !important; grid-template-columns: 1fr 1fr !important;
+    gap: var(--en-space-md) !important;
+    max-width: 1080px !important; margin: 0 auto !important;
+  }
+  .fit-card {
+    padding: var(--en-space-lg) !important;
+    border: 0.5px solid var(--en-gold-soft) !important;
+    background: rgba(240, 235, 220, 0.02) !important;
+  }
+  .fit-card.unfit { border-color: rgba(240, 235, 220, 0.1) !important; }
+  .fit-tag {
+    color: var(--en-gold) !important;
+    margin-bottom: var(--en-space-md) !important;
+    display: inline-block !important;
+  }
+  .fit-tag.unfit-tag { color: var(--en-cream-dim) !important; }
+  .fit-card h4 { margin-bottom: var(--en-space-md) !important; color: var(--en-cream) !important; }
+  .fit-list { list-style: none !important; padding: 0 !important; margin: 0 !important; }
+  .fit-list li {
+    padding: 8px 0 8px 24px !important;
+    position: relative !important;
+    font-size: 15px !important; line-height: 1.6 !important;
+    color: var(--en-cream-dim) !important;
+  }
+  .fit-list.yes li::before {
+    content: "+" !important; position: absolute !important;
+    left: 4px !important; color: var(--en-gold) !important;
+    font-weight: 500 !important;
+  }
+  .fit-list.no li::before {
+    content: "−" !important; position: absolute !important;
+    left: 4px !important; color: rgba(240, 235, 220, 0.4) !important;
+    font-weight: 500 !important;
+  }
+
+  /* CROSS LINK */
+  .cross-link-row {
+    display: grid !important; grid-template-columns: 1fr 1fr !important;
+    gap: var(--en-space-md) !important;
+    max-width: 1080px !important; margin: 0 auto !important;
+  }
+  .cross-link-item {
+    padding: var(--en-space-lg) !important;
+    border: 0.5px solid var(--en-gold-soft) !important;
+    background: rgba(240, 235, 220, 0.02) !important;
+    text-decoration: none !important;
+    display: flex !important; justify-content: space-between !important;
+    align-items: center !important; gap: var(--en-space-md) !important;
+    transition: border-color 0.2s !important;
+  }
+  .cross-link-item:hover { border-color: var(--en-gold) !important; }
+  .cross-link-meta {
+    color: var(--en-gold) !important;
+    margin-bottom: var(--en-space-2xs) !important;
+    display: block !important;
+  }
+  .cross-link-title {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 20px !important; font-weight: 500 !important;
+    color: var(--en-cream) !important;
+  }
+  .cross-link-arrow-small {
+    color: var(--en-gold) !important;
+    font-size: 22px !important;
+  }
+
+  /* CONTACT */
+  .contact-inner { max-width: 1080px; margin: 0 auto; text-align: center; }
+  .contact .section-label { display: block !important; margin-bottom: var(--en-space-sm) !important; }
+  .contact h2 { margin-bottom: var(--en-space-md) !important; }
+  .contact-lede {
+    margin-bottom: var(--en-space-xl) !important;
+    margin-left: auto !important; margin-right: auto !important;
+    color: var(--en-cream-dim) !important;
+  }
+  .office-grid {
+    display: grid !important; grid-template-columns: 1fr 1fr !important;
+    gap: var(--en-space-md) !important;
+    max-width: 880px !important;
+    margin: 0 auto var(--en-space-xl) !important;
+    text-align: left !important;
+  }
+  .office {
+    padding: var(--en-space-lg) !important;
+    border: 0.5px solid var(--en-gold-soft) !important;
+    background: rgba(240, 235, 220, 0.02) !important;
+  }
+  .office-flag {
+    color: var(--en-gold) !important;
+    margin-bottom: var(--en-space-sm) !important;
+    display: block !important;
+  }
+  .office-name {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-size: 22px !important; font-weight: 500 !important;
+    color: var(--en-cream) !important;
+    margin-bottom: var(--en-space-sm) !important;
+  }
+  .office-addr {
+    font-size: 15px !important; line-height: 1.7 !important;
+    color: var(--en-cream-dim) !important;
+  }
+  .email-block {
+    max-width: 880px !important; margin: 0 auto !important;
+    padding: var(--en-space-lg) var(--en-space-md) !important;
+    border-top: 0.5px solid var(--en-gold-soft) !important;
+    border-bottom: 0.5px solid var(--en-gold-soft) !important;
+    text-align: center !important;
+  }
+  .email-label {
+    color: var(--en-gold) !important;
+    margin-bottom: var(--en-space-md) !important;
+    display: block !important;
+  }
+  .email-addr {
+    font-family: 'Cormorant Garamond', serif !important;
+    font-style: italic !important;
+    font-size: clamp(24px, 3vw, 36px) !important;
+    color: var(--en-gold) !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+    transition: color 0.2s !important;
+  }
+  .email-addr:hover { color: var(--en-gold-hover) !important; }
+
+  a:link, a:visited { color: inherit; }
+
+  footer { padding-top: var(--en-space-lg) !important; padding-bottom: var(--en-space-lg) !important; }
+  .footer-inner {
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 11px !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    opacity: 0.6;
+  }
+
+  @media (max-width: 900px) {
+    .audience, .fit-grid, .office-grid, .cross-link-row { grid-template-columns: 1fr !important; }
+    .matrix { grid-template-columns: 1fr !important; }
+  }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">IN</div>
+      <div class="logo-text">
+        <span class="main">INI</span>
+        <span class="sub">IBERIAN NEXUS INVESTMENT</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="solutions.html">Solutions</a></li>
+      <li><a href="track-01.html">China Outbound</a></li>
+      <li><a href="track-02.html" class="current">Asset Investment</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-lang">
+      <a href="../track-02.html" class="inactive">中文</a>
+      <span class="active">EN</span>
+      <a href="../es/track-02.html" class="inactive">ES</a>
+    </div>
+  </div>
+</nav>
+
+<!-- DETAIL HERO -->
+<section class="detail-hero">
+  <div class="container">
+    <div class="detail-hero-inner fade-in">
+      <div class="detail-line">Track 02 · Asset Investment</div>
+      <h1>Cross-Border Asset <span class="gold">Transactions</span></h1>
+      <div class="mini-divider"></div>
+      <p>End-to-end coordination from screening to funding. We match European renewable energy assets with Chinese capital, applying the due diligence rigor required by institutional investors.</p>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIENCE -->
+<section class="track-section alt">
+  <div class="container">
+    <div class="track-section-label">Who We Serve</div>
+    <div class="audience fade-in">
+      <div class="audience-card">
+        <div class="audience-flag">Europe Side</div>
+        <div class="audience-list">Project developers · EPC contractors · Project sponsors · Investment banks / FA · Asset holders</div>
+      </div>
+      <div class="audience-card">
+        <div class="audience-flag">China Side</div>
+        <div class="audience-list">SOE investors · Private industrial capital · Strategic investors · Funds &amp; financial investors</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT TYPE + CAPITAL TYPE -->
+<section class="track-section">
+  <div class="container">
+    <div class="track-section-label">Project Type · Capital Type</div>
+    <div class="matrix fade-in">
+      <div class="matrix-col">
+        <div class="matrix-col-head">PROJECT TYPE</div>
+        <h5>Project Type</h5>
+        <ul class="matrix-list">
+          <li>PV</li>
+          <li>Wind</li>
+          <li>BESS</li>
+          <li>Hybrid</li>
+        </ul>
+      </div>
+      <div class="matrix-col">
+        <div class="matrix-col-head">PROJECT STAGE</div>
+        <h5>Project Stage</h5>
+        <ul class="matrix-list">
+          <li>RTB</li>
+          <li>COD</li>
+          <li>Operating Assets</li>
+          <li>Portfolio</li>
+          <li>Single Asset</li>
+        </ul>
+      </div>
+      <div class="matrix-col">
+        <div class="matrix-col-head">CAPITAL TYPE</div>
+        <h5>Capital Type</h5>
+        <ul class="matrix-list">
+          <li>Chinese SOEs</li>
+          <li>Private Industrial Capital</li>
+          <li>Strategic Investors</li>
+          <li>Funds / Financial Investors</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KEY ASSESSMENT DIMENSIONS -->
+<section class="track-section alt">
+  <div class="container">
+    <div class="track-section-label">Key Assessment Dimensions</div>
+    <div class="section-head center fade-in" style="margin-bottom: 2rem;">
+      <p class="lede">We examine every project from an institutional investor's perspective, covering the following key dimensions:</p>
+    </div>
+    <div class="matrix fade-in" style="grid-template-columns: 1fr;">
+      <div class="matrix-col" style="max-width: 980px; margin: 0 auto; width: 100%;">
+        <ul class="matrix-list" style="justify-content: center;">
+          <li>IRR</li>
+          <li>Grid Connection</li>
+          <li>Permitting Status</li>
+          <li>Land Control</li>
+          <li>PPA / Merchant Exposure</li>
+          <li>Curtailment Risk</li>
+          <li>COD Timeline</li>
+          <li>Transaction Structure</li>
+          <li>Sponsor Track Record</li>
+          <li>O&amp;M Arrangement</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STANDARD PROCESS (9 STEPS) -->
+<section class="track-section">
+  <div class="container">
+    <div class="track-section-label">Standard Process</div>
+    <div class="section-head center fade-in" style="margin-bottom: 2rem;">
+      <p class="lede">From first contact to closing, we advance every project through an institutional-standard process:</p>
+    </div>
+    <div class="process-scroll fade-in">
+      <div class="process-long">
+        <div class="step-mini">
+          <span class="step-num">01</span>
+          <div class="step-mini-title">Teaser</div>
+          <div class="step-mini-sub">Project summary</div>
+        </div>
+        <div class="step-mini">
+          <span class="step-num">02</span>
+          <div class="step-mini-title">Screening</div>
+          <div class="step-mini-sub">Initial filter</div>
+        </div>
+        <div class="step-mini">
+          <span class="step-num">03</span>
+          <div class="step-mini-title">NDA</div>
+          <div class="step-mini-sub">Confidentiality</div>
+        </div>
+        <div class="step-mini">
+          <span class="step-num">04</span>
+          <div class="step-mini-title">Data Room</div>
+          <div class="step-mini-sub">Data room access</div>
+        </div>
+        <div class="step-mini">
+          <span class="step-num">05</span>
+          <div class="step-mini-title">Indicative Offer</div>
+          <div class="step-mini-sub">Indicative bid</div>
+        </div>
+        <div class="step-mini">
+          <span class="step-num">06</span>
+          <div class="step-mini-title">DD</div>
+          <div class="step-mini-sub">Due diligence</div>
+        </div>
+        <div class="step-mini">
+          <span class="step-num">07</span>
+          <div class="step-mini-title">SPA / SHA</div>
+          <div class="step-mini-sub">Transaction docs</div>
+        </div>
+        <div class="step-mini">
+          <span class="step-num">08</span>
+          <div class="step-mini-title">Closing</div>
+          <div class="step-mini-sub">Completion</div>
+        </div>
+        <div class="step-mini">
+          <span class="step-num">09</span>
+          <div class="step-mini-title">Post-Closing</div>
+          <div class="step-mini-sub">Post-close coordination</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERABLES -->
+<section class="track-section alt">
+  <div class="container">
+    <div class="track-section-label">Core Deliverables</div>
+    <div class="deliverables fade-in">
+      <div class="deliv-list">
+        <div class="deliv-item">Investment memo from a Chinese investor's perspective</div>
+        <div class="deliv-item">Targeted capital matching plan</div>
+        <div class="deliv-item">Full coordination of on-site due diligence</div>
+        <div class="deliv-item">Transaction structure / tax / legal coordination</div>
+        <div class="deliv-item">SPA / SHA negotiation support</div>
+        <div class="deliv-item">Cross-border closing and fund settlement</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FIT -->
+<section class="track-section">
+  <div class="container">
+    <div class="track-section-label">Fit and Not-Fit</div>
+    <div class="fit-grid fade-in">
+      <div class="fit-card">
+        <div class="fit-tag">+ Right-Fit Clients</div>
+        <h4>Where We Can Help</h4>
+        <ul class="fit-list yes">
+          <li>European project developers seeking exit via Chinese capital</li>
+          <li>EPC / system integrators holding divestible project pipelines</li>
+          <li>Overseas renewable investment arms of Chinese SOEs</li>
+          <li>Chinese private capital with industrial-strategic intent</li>
+          <li>Investment funds focused on European renewable assets</li>
+        </ul>
+      </div>
+      <div class="fit-card unfit">
+        <div class="fit-tag unfit-tag">− Where We Are Not the Right Fit</div>
+        <h4>We Suggest You Find a Different Partner</h4>
+        <ul class="fit-list no">
+          <li>Unclear project ownership or core permits not secured</li>
+          <li>Project sponsors seeking only a generic "matchmaking broker"</li>
+          <li>Reservations about DD transparency, unwilling to open a data room</li>
+          <li>Expected IRR is drastically misaligned with objective market levels</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CROSS LINK -->
+<section class="cross-link">
+  <div class="container">
+    <div class="cross-link-row fade-in">
+      <a href="solutions.html" class="cross-link-item">
+        <div>
+          <div class="cross-link-meta">Navigation</div>
+          <div class="cross-link-title">Back to Solutions Overview</div>
+        </div>
+        <span class="cross-link-arrow-small">←</span>
+      </a>
+      <a href="track-01.html" class="cross-link-item">
+        <div>
+          <div class="cross-link-meta">INI's Other Independent Track</div>
+          <div class="cross-link-title">Track 01 · China-to-Europe Market Entry</div>
+        </div>
+        <span class="cross-link-arrow-small">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="section-label fade-in">Contact</div>
+      <h2 class="h-display fade-in">Start a <span class="gold">Conversation.</span></h2>
+      <p class="lede contact-lede fade-in">
+        If you have a concrete project target or investment intent, we prefer to first understand the project background and capital requirements before assessing whether collaboration makes sense.
+      </p>
+      <div class="office-grid fade-in">
+        <div class="office">
+          <div class="office-flag">Madrid · Spain</div>
+          <div class="office-name">European Headquarters</div>
+          <div class="office-addr">Paseo de la Castellana, 121 – 7ºB<br>28046 Madrid, Spain</div>
+        </div>
+        <div class="office">
+          <div class="office-flag">Shanghai · China</div>
+          <div class="office-name">China Office</div>
+          <div class="office-addr">Honqiao Green Valley Plaza Building G, 4F<br>69 Yonghong Road, Minhang District, Shanghai</div>
+        </div>
+      </div>
+      <div class="email-block fade-in">
+        <div class="email-label">Email</div>
+        <a href="mailto:contact@iberiannexus.com" class="email-addr">contact@iberiannexus.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <span>© 2026 Iberian Nexus Investment SL · Madrid · Shanghai</span>
+      <span>EN · 中文 · ES</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 30) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 50);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
